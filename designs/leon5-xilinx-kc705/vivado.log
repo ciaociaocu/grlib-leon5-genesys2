@@ -1,0 +1,2046 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Feb  8 15:44:25 2023
+# Process ID: 269577
+# Current directory: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705
+# Command line: vivado -mode gui -source ./vivado/leon5mp_vivado.tcl
+# Log file: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado.log
+# Journal file: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source ./vivado/leon5mp_vivado.tcl
+# create_project leon5-xilinx-kc705 ./vivado/leon5-xilinx-kc705 -part XC7K325Tffg900-2 -force
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
+# set_property top testbench [get_filesets sim_1]
+# set_property top_lib work [get_filesets sim_1]
+# set_property target_language verilog [current_project]
+# set_property strategy {Vivado Synthesis Defaults} [get_runs synth_1]
+# set_property strategy {Performance_ExplorePostRoutePhysOpt} [get_runs impl_1]
+# read_vhdl -library grlib ../../lib/grlib/stdlib/version.vhd
+# read_vhdl -library grlib ../../lib/grlib/stdlib/config_types.vhd
+# read_vhdl -library grlib grlib_config_leon5.vhd
+# read_vhdl -library grlib ../../lib/grlib/stdlib/stdlib.vhd
+# read_vhdl -library grlib ../../lib/grlib/stdlib/stdio.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/stdlib/stdio.vhd]
+# read_vhdl -library grlib ../../lib/grlib/stdlib/testlib.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/stdlib/testlib.vhd]
+# read_vhdl -library grlib ../../lib/grlib/util/util.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/util/util.vhd]
+# read_vhdl -library grlib ../../lib/grlib/sparc/sparc.vhd
+# read_vhdl -library grlib ../../lib/grlib/sparc/sparc_disas.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/sparc/sparc_disas.vhd]
+# read_vhdl -library grlib ../../lib/grlib/sparc/cpu_disas.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/sparc/cpu_disas.vhd]
+# read_vhdl -library grlib ../../lib/grlib/riscv/riscv.vhd
+# read_vhdl -library grlib ../../lib/grlib/riscv/riscv_disas.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/riscv/riscv_disas.vhd]
+# read_vhdl -library grlib ../../lib/grlib/riscv/cpu_disas.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/riscv/cpu_disas.vhd]
+# read_vhdl -library grlib ../../lib/grlib/modgen/multlib.vhd
+# read_vhdl -library grlib ../../lib/grlib/modgen/leaves.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/amba.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/devices.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/defmst.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/apbctrl.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/apbctrlx.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/apbctrlsp.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/apbctrldp.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/apbctrl3p.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/apbctrl4p.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/ahbctrl.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/dma2ahb_pkg.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/dma2ahb.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/ahbmst.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/ahblitm2ahbm.vhd
+# read_vhdl -library grlib ../../lib/grlib/amba/dma2ahb_tp.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/amba/dma2ahb_tp.vhd]
+# read_vhdl -library grlib ../../lib/grlib/amba/amba_tp.vhd
+# set_property used_in_synthesis false [get_files ../../lib/grlib/amba/amba_tp.vhd]
+# read_vhdl -library grlib ../../lib/grlib/dftlib/dftlib.vhd
+# read_vhdl -library grlib ../../lib/grlib/dftlib/trstmux.vhd
+# read_vhdl -library grlib ../../lib/grlib/dftlib/synciotest.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/generic_bm_pkg.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/ahb_be.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/axi4_be.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/bmahbmst.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/bm_fre.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/bm_me_rc.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/bm_me_wc.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/fifo_control_rc.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/fifo_control_wc.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/generic_bm_ahb.vhd
+# read_vhdl -library grlib ../../lib/grlib/generic_bm/generic_bm_axi.vhd
+# read_vhdl -library techmap ../../lib/techmap/gencomp/gencomp.vhd
+# read_vhdl -library techmap ../../lib/techmap/gencomp/netcomp.vhd
+# read_vhdl -library techmap ../../lib/techmap/alltech/allclkgen.vhd
+# read_vhdl -library techmap ../../lib/techmap/alltech/allddr.vhd
+# read_vhdl -library techmap ../../lib/techmap/alltech/allmem.vhd
+# read_vhdl -library techmap ../../lib/techmap/alltech/allmul.vhd
+# read_vhdl -library techmap ../../lib/techmap/alltech/allpads.vhd
+# read_vhdl -library techmap ../../lib/techmap/alltech/alltap.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/memory_inferred.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/ddr_inferred.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/mul_inferred.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/ddr_phy_inferred.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/ddrphy_datapath.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/fifo_inferred.vhd
+# read_vhdl -library techmap ../../lib/techmap/inferred/sim_pll.vhd
+# set_property used_in_synthesis false [get_files ../../lib/techmap/inferred/sim_pll.vhd]
+# read_vhdl -library techmap ../../lib/techmap/inferred/lpddr2_phy_inferred.vhd
+# set_property used_in_synthesis false [get_files ../../lib/techmap/inferred/lpddr2_phy_inferred.vhd]
+# read_vhdl -library techmap ../../lib/techmap/unisim/memory_kintex7.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/memory_ultrascale.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/memory_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/buffer_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/pads_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/clkgen_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/tap_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/ddr_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/ddr_phy_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/sysmon_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/mul_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/unisim/spictrl_unisim.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/techbuf.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/clkgen.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/clkmux.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/clkinv.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/clkand.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/grgates.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/ddr_ireg.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/ddr_oreg.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/clkpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/clkpad_ds.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/inpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/inpad_ds.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/iodpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/iopad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/iopad_ds.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/lvds_combo.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/odpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/outpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/outpad_ds.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/toutpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/toutpad_ds.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/skew_outpad.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/ddrphy.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram64.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram_2p.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram_dp.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncfifo_2p.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/regfile_3p.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/tap.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/nandtree.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/grlfpw_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/grfpw_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/leon3_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/leon4_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/mul_61x61.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/cpu_disas_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/ringosc.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/grpci2_phy_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/system_monitor.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/inpad_ddr.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/outpad_ddr.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/iopad_ddr.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram128bw.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram256bw.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram128.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram156bw.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/techmult.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/spictrl_net.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/scanreg.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncrambw.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncram_2pbw.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/sdram_phy.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/syncreg.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/serdes.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/iopad_tm.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/toutpad_tm.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/memrwcol.vhd
+# read_vhdl -library techmap ../../lib/techmap/maps/cdcbus.vhd
+# read_vhdl -library eth ../../lib/eth/comp/ethcomp.vhd
+# read_vhdl -library eth ../../lib/eth/core/greth_pkg.vhd
+# read_vhdl -library eth ../../lib/eth/core/eth_rstgen.vhd
+# read_vhdl -library eth ../../lib/eth/core/eth_edcl_ahb_mst.vhd
+# read_vhdl -library eth ../../lib/eth/core/eth_ahb_mst.vhd
+# read_vhdl -library eth ../../lib/eth/core/greth_tx.vhd
+# read_vhdl -library eth ../../lib/eth/core/greth_rx.vhd
+# read_vhdl -library eth ../../lib/eth/core/grethc.vhd
+# read_vhdl -library eth ../../lib/eth/wrapper/greth_gen.vhd
+# read_vhdl -library opencores ../../lib/opencores/can/cancomp.vhd
+# read_vhdl -library opencores ../../lib/opencores/can/can_top.vhd
+# read_vhdl -library opencores ../../lib/opencores/i2c/i2c_master_bit_ctrl.vhd
+# read_vhdl -library opencores ../../lib/opencores/i2c/i2c_master_byte_ctrl.vhd
+# read_vhdl -library opencores ../../lib/opencores/i2c/i2coc.vhd
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/clean_rst.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/clean_rst.v:]
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/decoder_8b10b.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/decoder_8b10b.v:]
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/encoder_8b10b.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/encoder_8b10b.v:]
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/ge_1000baseX_constants.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_constants.v:]
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/ge_1000baseX_regs.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_regs.v:]
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/ge_1000baseX_test.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_test.v:]
+# read_verilog -library opencores ../../lib/opencores/ge_1000baseX/timescale.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/timescale.v:]
+# read_vhdl -library opencores ../../lib/opencores/ge_1000baseX/ge_1000baseX_comp.vhd
+# read_verilog -library opencores -sv ../../lib/opencores/ge_1000baseX/ge_1000baseX.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX.v:]
+# read_verilog -library opencores -sv ../../lib/opencores/ge_1000baseX/ge_1000baseX_an.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_an.v:]
+# read_verilog -library opencores -sv ../../lib/opencores/ge_1000baseX/ge_1000baseX_mdio.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_mdio.v:]
+# read_verilog -library opencores -sv ../../lib/opencores/ge_1000baseX/ge_1000baseX_rx.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_rx.v:]
+# read_verilog -library opencores -sv ../../lib/opencores/ge_1000baseX/ge_1000baseX_sync.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_sync.v:]
+# read_verilog -library opencores -sv ../../lib/opencores/ge_1000baseX/ge_1000baseX_tx.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/ge_1000baseX/ge_1000baseX_tx.v:]
+# read_vhdl -library gaisler ../../lib/gaisler/arith/arith.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/arith/mul32.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/arith/div32.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/memctrl/memctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/memctrl/sdctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/memctrl/sdctrl64.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/memctrl/sdmctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/memctrl/srctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmuconfig.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmuiface.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/libmmu.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmutlbcam.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmulrue.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmulru.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmutlb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmutw.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/srmmu/mmu.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3/leon3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3/grfpushwx.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/tbufmem.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/tbufmem_2p.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/dsu3x.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/dsu3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/dsu3_mb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/libfpu.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/libiu.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/libcache.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/libleon3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/regfile_3p_l3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/mmu_acache.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/mmu_icache.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/mmu_dcache.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/cachemem.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/mmu_cache.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/grfpwx.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/grlfpwx.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/iu3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/proc3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/grfpwxsh.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/leon3x.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/leon3cg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/leon3s.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/leon3sh.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/l3stat.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon3v3/cmvalidbits.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon4/leon4.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/irqmp/irqmp.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/irqmp/irqamp.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/irqmp/irqmp_bmode.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/l2cache/pkg/l2cache.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/can/can.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/can/can_mod.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/can/can_oc.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/can/can_mc.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/can/canmux.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/can/can_rd.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/canfd/canfd.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/axi.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahbm2axi.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahbm2axi3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahbm2axi4.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/axinullslv.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahb2axib.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahb2axi3b.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahb2axi4b.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/axi/ahb2axi_l.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/misc.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/rstgen.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/gptimer.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbram.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbdpram.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbtrace_mmb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbtrace_mb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbtrace.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/grgpio.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbstat.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/logan.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/apbps2.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/charrom_package.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/charrom.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/apbvga.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/svgactrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/grsysmon.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/gracectrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/grgpreg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahb_mst_iface.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/grgprbank.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/grversion.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/apb3cdc.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbsmux.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/ahbmmux.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/misc/grtachom.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/net/net.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/uart/uart.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/uart/libdcom.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/uart/apbuart.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/uart/dcom.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/uart/dcom_uart.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/uart/ahbuart.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/sim/sim.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/sim.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/sram.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/sram.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/sram16.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/sram16.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/phy.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/phy.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ser_phy.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ser_phy.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ahbrep.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ahbrep.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/delay_wire.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/delay_wire.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/pwm_check.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/pwm_check.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ramback.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ramback.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/slavecheck_slv.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/slavecheck_slv.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ddrram.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ddrram.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ddr2ram.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ddr2ram.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ddr3ram.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ddr3ram.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/sdrtestmod.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/sdrtestmod.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/ahbram_sim.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/ahbram_sim.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/aximem.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/aximem.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/axirep.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/axirep.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/axixmem.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/axixmem.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/sramtestmod.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/sramtestmod.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/uartprint.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/uartprint.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/dfi_phy_sim.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/dfi_phy_sim.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/sim/dfi_phy_sim_fr.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/sim/dfi_phy_sim_fr.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/jtag.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/libjtagcom.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/jtagcom.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/bscanregs.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/bscanregsbd.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/jtagcom2.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/ahbjtag.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/ahbjtag_bsd.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/jtagcomrv.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/ahbjtagrv.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/jtagtst.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/jtag/jtagtst.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/jtag/jtag_rv.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/jtag/jtag_rv.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/greth/ethernet_mac.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/greth.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/greth_mb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/greth_gbit.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/greths.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/greth_gbit_mb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/greths_mb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/grethm.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/grethm_mb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/rgmii.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/rgmii_kc705.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/rgmii_series7.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/rgmii_series6.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/comma_detect.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/elastic_buffer.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/gmii_to_mii.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/greth/adapters/word_aligner.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/usb/grusb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddrpkg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddrintpkg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddrphy_wrap.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr2spax_ahb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr2spax_ddr.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr2buf.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr2spax.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr2spa.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr1spax.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddr1spax_ddr.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ddrspa.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2mig_7series_pkg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2mig_7series.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2mig_7series_ddr2_dq16_ad13_ba3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2mig_7series_ddr3_dq16_ad15_ba3.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2mig_7series_cpci_xc7k.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2axi_mig_7series.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/axi_mig_7series.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2avl_async.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/ddr/ahb2avl_async_be.vhd
+# read_verilog -library gaisler ../../lib/gaisler/ddr/mig_interface_model.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/mig_interface_model.v:]
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/ddr/mig_interface_model.v]
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2c.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2cmst.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2cmst_gen.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2cslv.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2c2ahbx.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2c2ahb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2c2ahb_apb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2c2ahb_gen.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/i2c/i2c2ahb_apb_gen.vhd
+# read_verilog -library gaisler ../../lib/gaisler/i2c/i2c_slave_model.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/i2c/i2c_slave_model.v:]
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/i2c/i2c_slave_model.v]
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spi.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spimctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spictrlx.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spictrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spi2ahbx.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spi2ahb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spi2ahb_apb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/spi/spi_flash.vhd
+# set_property used_in_synthesis false [get_files ../../lib/gaisler/spi/spi_flash.vhd]
+# read_vhdl -library gaisler ../../lib/gaisler/nand/nandpkg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac/grdmac_pkg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac/apbmem.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac/grdmac_ahbmst.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac/grdmac_alignram.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac/grdmac.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac/grdmac_1p.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2_pkg.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2_apb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/mem2buf.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/buf2mem.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2_ctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2_ahb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2_acc.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/grdmac2/grdmac2_axi.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/subsys/subsys.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/subsys/leon_dsu_stat_base.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/plic/plic.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/plic/grplic.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/plic/plic_encoder.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/plic/plic_gateway.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/plic/plic_target.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/plic/grplic_ahb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5/leon5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/leon5int.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/itbufmem5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/bht_pap.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/btb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/inst_text.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/iu5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/cctrl5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/cachemem5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/regfile5_ram.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/regfile5_dff.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/nanofpu.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/cpucore5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/tbufmem5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/dbgmod5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/irqmp5.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/l5stat.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/leon5v0/leon5sys.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/l2c_lite/l2c_lite.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/l2c_lite/l2c_lite_mem.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/l2c_lite/l2c_lite_ctrl.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/l2c_lite/l2c_lite_ahb.vhd
+# read_vhdl -library gaisler ../../lib/gaisler/l2c_lite/l2c_lite_axi.vhd
+# read_vhdl -library esa ../../lib/esa/memoryctrl/memoryctrl.vhd
+# read_vhdl -library esa ../../lib/esa/memoryctrl/mctrl.vhd
+# read_vhdl -library fmf ../../lib/fmf/utilities/conversions.vhd
+# set_property used_in_synthesis false [get_files ../../lib/fmf/utilities/conversions.vhd]
+# read_vhdl -library fmf ../../lib/fmf/utilities/gen_utils.vhd
+# set_property used_in_synthesis false [get_files ../../lib/fmf/utilities/gen_utils.vhd]
+# read_vhdl -library fmf ../../lib/fmf/flash/flash.vhd
+# set_property used_in_synthesis false [get_files ../../lib/fmf/flash/flash.vhd]
+# read_vhdl -library fmf ../../lib/fmf/flash/s25fl064a.vhd
+# set_property used_in_synthesis false [get_files ../../lib/fmf/flash/s25fl064a.vhd]
+# read_vhdl -library fmf ../../lib/fmf/flash/m25p80.vhd
+# set_property used_in_synthesis false [get_files ../../lib/fmf/flash/m25p80.vhd]
+# read_vhdl -library fmf ../../lib/fmf/fifo/idt7202.vhd
+# set_property used_in_synthesis false [get_files ../../lib/fmf/fifo/idt7202.vhd]
+# read_verilog -library micron ../../lib/micron/sdram/mobile_sdr.v
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/micron/sdram/mobile_sdr.v:]
+# set_property used_in_synthesis false [get_files ../../lib/micron/sdram/mobile_sdr.v]
+# read_vhdl -library work ../../lib/work/debug/debug.vhd
+# set_property used_in_synthesis false [get_files ../../lib/work/debug/debug.vhd]
+# read_vhdl -library work ../../lib/work/debug/grtestmod.vhd
+# set_property used_in_synthesis false [get_files ../../lib/work/debug/grtestmod.vhd]
+# read_vhdl -library work ../../lib/work/debug/cpu_disas.vhd
+# set_property used_in_synthesis false [get_files ../../lib/work/debug/cpu_disas.vhd]
+# read_vhdl -library work config.vhd
+# read_vhdl -library work ahbrom.vhd
+# read_vhdl -library work leon5mp.vhd
+# read_vhdl -library work ddr_dummy.vhd
+# read_vhdl -library work testbench.vhd
+# set_property used_in_synthesis false [get_files testbench.vhd]
+# add_files -fileset sim_1 prom.srec ram.srec
+# read_xdc ../../boards/xilinx-kc705-xc7k325t/xilinx-kc705-xc7k325t.xdc
+# set_property used_in_synthesis true [get_files ../../boards/xilinx-kc705-xc7k325t/xilinx-kc705-xc7k325t.xdc]
+# set_property used_in_implementation true [get_files ../../boards/xilinx-kc705-xc7k325t/xilinx-kc705-xc7k325t.xdc]
+# set_property target_simulator ModelSim [current_project]
+# set_property top_lib work [current_fileset]
+# set_property top_arch rtl [current_fileset]
+# set_property top leon5mp [current_fileset]
+# if {[regexp -nocase {.*board_part.*} [list_property [current_project]]]} {
+#   set_property board_part xilinx.com:kc705:part0:1.0 [current_project]
+# } else {
+#   set_property board xilinx.com:kc705:part0:1.0 [current_project]
+# }
+# set_property target_language verilog [current_project]
+# import_ip -files vivado/mig.xci -name mig
+WARNING: [IP_Flow 19-2162] IP 'mig' is locked:
+* IP definition 'Memory Interface Generator (MIG 7 Series) (4.0)' for IP 'mig' (customized with software release 2017.3) has a newer minor version in the IP Catalog.
+import_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 6524.453 ; gain = 6.250 ; free physical = 3153 ; free virtual = 42878
+# generate_target  all [get_files ./vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci] -force 
+CRITICAL WARNING: [filemgmt 20-1365] Unable to generate target(s) for the following file is locked: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci
+Locked reason: 
+* IP definition 'Memory Interface Generator (MIG 7 Series) (4.0)' for IP 'mig' (customized with software release 2017.3) has a newer minor version in the IP Catalog.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property target_simulator XSim [current_project]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/config.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/leon5mp.vhd:]
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Simulation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci
+
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim/prom.srec'
+INFO: [SIM-utils-43] Exported '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim/ram.srec'
+WARNING: [SIM-utils-52] IP component XML file does not exist: '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/stdlib/config_types.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/grlib_config_leon5.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/stdlib/version.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/stdlib/stdlib.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/amba/amba.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/amba/devices.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/gencomp/gencomp.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/axi.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/ahb2axi4b.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahb2axi4b'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/misc/misc.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahb2axi_mig_7series'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/ahb2axib.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahb2axib'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/stdlib/stdio.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/stdlib/testlib.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/amba/ahbctrl.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'ahbctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/dftlib/dftlib.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/libjtagcom.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/jtag.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/ahbjtag.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahbjtag'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/amba/ahbmst.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'ahbmst'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/misc/ahbram.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahbram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ahbram_sim.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahbram_sim'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/sim.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ahbrep.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahbrep'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/ahbrom.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'ahbrom'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/misc/ahbstat.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahbstat'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/uart/uart.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/uart/libdcom.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/uart/ahbuart.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ahbuart'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/alltech/allclkgen.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/alltech/allddr.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/alltech/allmem.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/alltech/allmul.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/alltech/allpads.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/alltech/alltap.vhd" into library techmap
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/amba/apbctrl.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'apbctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/amba/apbctrlx.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'apbctrlx'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/uart/apbuart.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'apbuart'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/arith/arith.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/axi_mig_7series.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'axi_mig_7series'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5/leon5.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/leon5int.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/bht_pap.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'bht_pap'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/btb.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'btb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/buffer_unisim.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'clkbuf_xilinx'
+INFO: [VRFC 10-3107] analyzing entity 'clkmux_xilinx'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon3/leon3.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/cachemem5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'cachemem5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/sparc/sparc.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/cctrl5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'cctrl5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/cdcbus.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'cdcbus'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/clkand.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'clkand'
+INFO: [VRFC 10-3107] analyzing entity 'clkrand'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/clkgen.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'clkgen'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/clkgen_unisim.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'clkgen_virtex5'
+INFO: [VRFC 10-3107] analyzing entity 'clkgen_virtex7'
+INFO: [VRFC 10-3107] analyzing entity 'clkgen_kintexu'
+INFO: [VRFC 10-3107] analyzing entity 'clkgen_virtexup'
+INFO: [VRFC 10-3107] analyzing entity 'clkand_unisim'
+INFO: [VRFC 10-3107] analyzing entity 'clkmux_unisim'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/clkmux.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'clkmux'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/clkpad_ds.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'clkpad_ds'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/config.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/sparc/sparc_disas.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/cpucore5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'cpucore5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/dbgmod5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'dbgmod5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/uart/dcom.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'dcom'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/uart/dcom_uart.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'dcom_uart'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'ddr3ram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/ddr_dummy.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'ddr_dummy'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/inferred/ddr_inferred.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'gen_iddr_reg'
+INFO: [VRFC 10-3107] analyzing entity 'gen_oddr_reg'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/ddr_oreg.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'ddr_oreg'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/ddr_unisim.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'unisim_iddr_reg'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_iddre1_reg'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_iddre2_reg'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_oddr_reg'
+INFO: [VRFC 10-3107] analyzing entity 'oddrv2'
+INFO: [VRFC 10-3107] analyzing entity 'oddrc3e'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/work/debug/debug.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/arith/div32.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'div32'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/greth_pkg.vhd" into library eth
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/eth_ahb_mst.vhd" into library eth
+INFO: [VRFC 10-3107] analyzing entity 'eth_ahb_mst'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/eth_edcl_ahb_mst.vhd" into library eth
+INFO: [VRFC 10-3107] analyzing entity 'eth_edcl_ahb_mst'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/eth_rstgen.vhd" into library eth
+INFO: [VRFC 10-3107] analyzing entity 'eth_rstgen'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/comp/ethcomp.vhd" into library eth
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/net/net.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/ethernet_mac.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/misc/gptimer.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'gptimer'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/greth_gbit_mb.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'greth_gbit_mb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/greth_mb.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'greth_mb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/greth_rx.vhd" into library eth
+INFO: [VRFC 10-3107] analyzing entity 'greth_rx'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/greth_tx.vhd" into library eth
+INFO: [VRFC 10-3107] analyzing entity 'greth_tx'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/eth/core/grethc.vhd" into library eth
+INFO: [VRFC 10-3107] analyzing entity 'grethc'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/grethm_mb.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'grethm_mb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/grgates.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'grmux2'
+INFO: [VRFC 10-3107] analyzing entity 'grmux2v'
+INFO: [VRFC 10-3107] analyzing entity 'grdff'
+INFO: [VRFC 10-3107] analyzing entity 'gror2'
+INFO: [VRFC 10-3107] analyzing entity 'grand12'
+INFO: [VRFC 10-3107] analyzing entity 'grnand2'
+INFO: [VRFC 10-3107] analyzing entity 'grand2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/i2c/i2c.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/i2c/i2c_master_bit_ctrl.vhd" into library opencores
+INFO: [VRFC 10-3107] analyzing entity 'i2c_master_bit_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/i2c/i2c_master_byte_ctrl.vhd" into library opencores
+INFO: [VRFC 10-3107] analyzing entity 'i2c_master_byte_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/opencores/i2c/i2coc.vhd" into library opencores
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/i2c/i2cmst.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'i2cmst'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/inpad.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'inpad'
+INFO: [VRFC 10-3107] analyzing entity 'inpadv'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/iopad.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'iopad'
+INFO: [VRFC 10-3107] analyzing entity 'iopadv'
+INFO: [VRFC 10-3107] analyzing entity 'iopadvv'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/irqmp5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'irqmp5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/itbufmem5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'itbufmem5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/iu5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'iu5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/jtagcom.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'jtagcom'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/jtagcom2.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'jtagcom2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/l2cache/pkg/l2cache.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/l5stat.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'l5stat'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/modgen/leaves.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'FLIPFLOP'
+INFO: [VRFC 10-3107] analyzing entity 'PP_LOW'
+INFO: [VRFC 10-3107] analyzing entity 'PP_MIDDLE'
+INFO: [VRFC 10-3107] analyzing entity 'PP_HIGH'
+INFO: [VRFC 10-3107] analyzing entity 'R_GATE'
+INFO: [VRFC 10-3107] analyzing entity 'DECODER'
+INFO: [VRFC 10-3107] analyzing entity 'FULL_ADDER'
+INFO: [VRFC 10-3107] analyzing entity 'HALF_ADDER'
+INFO: [VRFC 10-3107] analyzing entity 'INVBLOCK'
+INFO: [VRFC 10-3107] analyzing entity 'XXOR1'
+INFO: [VRFC 10-3107] analyzing entity 'BLOCK0'
+INFO: [VRFC 10-3107] analyzing entity 'BLOCK1'
+INFO: [VRFC 10-3107] analyzing entity 'BLOCK2'
+INFO: [VRFC 10-3107] analyzing entity 'BLOCK1A'
+INFO: [VRFC 10-3107] analyzing entity 'BLOCK2A'
+INFO: [VRFC 10-3107] analyzing entity 'PRESTAGE_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_0_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_1_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_2_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_3_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_4_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_5_64'
+INFO: [VRFC 10-3107] analyzing entity 'XORSTAGE_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLCTREE_64'
+INFO: [VRFC 10-3107] analyzing entity 'DBLCADDER_64_64'
+INFO: [VRFC 10-3107] analyzing entity 'XXOR2'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_0_32'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_1_32'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_2_32'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_3_32'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_4_32'
+INFO: [VRFC 10-3107] analyzing entity 'XORSTAGE_32'
+INFO: [VRFC 10-3107] analyzing entity 'PRESTAGE_32'
+INFO: [VRFC 10-3107] analyzing entity 'DBLCTREE_32'
+INFO: [VRFC 10-3107] analyzing entity 'DBLCADDER_32_32'
+INFO: [VRFC 10-3107] analyzing entity 'PRESTAGE_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_0_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_1_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_2_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_3_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_4_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_5_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLC_6_128'
+INFO: [VRFC 10-3107] analyzing entity 'XORSTAGE_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLCTREE_128'
+INFO: [VRFC 10-3107] analyzing entity 'DBLCADDER_128_128'
+INFO: [VRFC 10-3107] analyzing entity 'BOOTHCODER_18_18'
+INFO: [VRFC 10-3107] analyzing entity 'WALLACE_18_18'
+INFO: [VRFC 10-3107] analyzing entity 'MULTIPLIER_18_18'
+INFO: [VRFC 10-3107] analyzing entity 'BOOTHCODER_34_10'
+INFO: [VRFC 10-3107] analyzing entity 'WALLACE_34_10'
+INFO: [VRFC 10-3107] analyzing entity 'MULTIPLIER_34_10'
+INFO: [VRFC 10-3107] analyzing entity 'MUL_33_9'
+INFO: [VRFC 10-3107] analyzing entity 'BOOTHCODER_34_18'
+INFO: [VRFC 10-3107] analyzing entity 'WALLACE_34_18'
+INFO: [VRFC 10-3107] analyzing entity 'MULTIPLIER_34_18'
+INFO: [VRFC 10-3107] analyzing entity 'MUL_33_17'
+INFO: [VRFC 10-3107] analyzing entity 'BOOTHCODER_34_34'
+INFO: [VRFC 10-3107] analyzing entity 'WALLACE_34_34'
+INFO: [VRFC 10-3107] analyzing entity 'MULTIPLIER_34_34'
+INFO: [VRFC 10-3107] analyzing entity 'MUL_33_33'
+INFO: [VRFC 10-3107] analyzing entity 'ADD32'
+INFO: [VRFC 10-3107] analyzing entity 'MUL_17_17'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/memctrl/memctrl.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/spi/spi.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/subsys/subsys.vhd" into library gaisler
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/esa/memoryctrl/memoryctrl.vhd" into library esa
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/leon5mp.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'leon5mp'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/leon5sys.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'leon5sys'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/esa/memoryctrl/mctrl.vhd" into library esa
+INFO: [VRFC 10-3107] analyzing entity 'mctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/inferred/memory_inferred.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'generic_syncram'
+INFO: [VRFC 10-3107] analyzing entity 'generic_syncram_reg'
+INFO: [VRFC 10-3107] analyzing entity 'generic_syncram_2p'
+INFO: [VRFC 10-3107] analyzing entity 'generic_syncram_2p_reg'
+INFO: [VRFC 10-3107] analyzing entity 'generic_regfile_3p'
+INFO: [VRFC 10-3107] analyzing entity 'generic_regfile_4p'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/memory_kintex7.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'kintex7_syncram_dp'
+INFO: [VRFC 10-3107] analyzing entity 'kintex7_syncram_2p'
+INFO: [VRFC 10-3107] analyzing entity 'kintex7_syncram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/memory_ultrascale.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'ultrascale_syncram'
+INFO: [VRFC 10-3107] analyzing entity 'ultrascale_syncram_dp'
+INFO: [VRFC 10-3107] analyzing entity 'ultrascale_syncram_2p'
+INFO: [VRFC 10-3107] analyzing entity 'ultrascale_syncram64'
+INFO: [VRFC 10-3107] analyzing entity 'ultrascale_syncram128'
+INFO: [VRFC 10-3107] analyzing entity 'ultrascale_syncram128bw'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/memory_unisim.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram_dp'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram_2p'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram64'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram128'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram128bw'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_syncram_be'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/memrwcol.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'memrwcol'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/modgen/multlib.vhd" into library grlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/arith/mul32.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'mul32'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/inferred/mul_inferred.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'gen_mul_61x61'
+INFO: [VRFC 10-3107] analyzing entity 'gen_mult_pipe'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/nanofpu.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'nanofpu'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/odpad.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'odpad'
+INFO: [VRFC 10-3107] analyzing entity 'odpadv'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/outpad.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'outpad'
+INFO: [VRFC 10-3107] analyzing entity 'outpadv'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/pads_unisim.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'unisim_inpad'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_iopad'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_outpad'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_toutpad'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_skew_outpad'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_clkpad'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_inpad_ds'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_clkpad_ds'
+INFO: [VRFC 10-3107] analyzing entity 'virtex4_inpad_ds'
+INFO: [VRFC 10-3107] analyzing entity 'virtex4_clkpad_ds'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_iopad_ds'
+INFO: [VRFC 10-3107] analyzing entity 'unisim_outpad_ds'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/phy.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'phy'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/regfile5_dff.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'regfile5_dff'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/regfile5_ram.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'regfile5_ram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/adapters/rgmii_kc705.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'rgmii_kc705'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/misc/rstgen.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'rstgen'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/memctrl/sdmctrl.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'sdmctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/spi/spimctrl.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'spimctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/sram.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'sram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/syncram.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'syncram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/syncram64.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'syncram64'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/syncram_2p.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'syncram_2p'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/syncram_dp.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'syncram_dp'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/syncrambw.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'syncrambw'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/syncreg.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'syncreg'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/tap.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'tap'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/unisim/tap_unisim.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'virtex_tap'
+INFO: [VRFC 10-3107] analyzing entity 'virtex2_tap'
+INFO: [VRFC 10-3107] analyzing entity 'spartan3_tap'
+INFO: [VRFC 10-3107] analyzing entity 'virtex4_tap'
+INFO: [VRFC 10-3107] analyzing entity 'virtex5_tap'
+INFO: [VRFC 10-3107] analyzing entity 'virtex6_tap'
+INFO: [VRFC 10-3107] analyzing entity 'spartan6_tap'
+INFO: [VRFC 10-3107] analyzing entity 'virtex7_tap'
+INFO: [VRFC 10-3107] analyzing entity 'kintex7_tap'
+INFO: [VRFC 10-3107] analyzing entity 'kintexu_tap'
+INFO: [VRFC 10-3107] analyzing entity 'virtexup_tap'
+INFO: [VRFC 10-3107] analyzing entity 'artix7_tap'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/tbufmem5.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'tbufmem5'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/techbuf.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'techbuf'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/techmap/maps/techmult.vhd" into library techmap
+INFO: [VRFC 10-3107] analyzing entity 'techmult'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/dftlib/trstmux.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'trstmux'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/uartprint.vhd" into library gaisler
+INFO: [VRFC 10-3107] analyzing entity 'uartprint'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/util/util.vhd" into library grlib
+INFO: [VRFC 10-3107] analyzing entity 'report_version'
+INFO: [VRFC 10-3107] analyzing entity 'report_design'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+xelab -wto af633894d4814a8d85b5bc8948905381 --incr --debug typical --relax --mt 8 -L grlib -L techmap -L gaisler -L work -L eth -L opencores -L esa -L secureip -L xpm --snapshot testbench_behav work.testbench -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto af633894d4814a8d85b5bc8948905381 --incr --debug typical --relax --mt 8 -L grlib -L techmap -L gaisler -L work -L eth -L opencores -L esa -L secureip -L xpm --snapshot testbench_behav work.testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'mig' remains a black box since it has no binding entity [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:233]
+WARNING: [VRFC 10-4940] 'iddr' remains a black box since it has no binding entity [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/adapters/rgmii_kc705.vhd:318]
+WARNING: [VRFC 10-4940] 'iddr' remains a black box since it has no binding entity [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/adapters/rgmii_kc705.vhd:335]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package grlib.config_types
+Compiling package grlib.config
+Compiling package grlib.version
+Compiling package grlib.stdlib
+Compiling package grlib.amba
+Compiling package gaisler.uart
+Compiling package grlib.devices
+Compiling package techmap.gencomp
+Compiling package gaisler.misc
+Compiling package gaisler.libdcom
+Compiling package grlib.stdio
+Compiling package gaisler.sim
+Compiling package work.debug
+Compiling package work.config
+Compiling package techmap.allclkgen
+Compiling package gaisler.memctrl
+Compiling package gaisler.leon3
+Compiling package gaisler.leon5
+Compiling package gaisler.spi
+Compiling package gaisler.i2c
+Compiling package gaisler.net
+Compiling package gaisler.jtag
+Compiling package gaisler.l2cache
+Compiling package gaisler.subsys
+Compiling package gaisler.axi
+Compiling package esa.memoryctrl
+Compiling package techmap.allpads
+Compiling package gaisler.arith
+Compiling package gaisler.leon5int
+Compiling package ieee.math_real
+Compiling package grlib.testlib
+Compiling package grlib.sparc
+Compiling package grlib.sparc_disas
+Compiling package techmap.allmem
+Compiling package grlib.multlib
+Compiling package techmap.allmul
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_textio
+Compiling package grlib.dftlib
+Compiling package gaisler.libjtagcom
+Compiling package techmap.alltap
+Compiling package gaisler.ethernet_mac
+Compiling package eth.ethcomp
+Compiling package eth.grethpkg
+Compiling package techmap.allddr
+Compiling package opencores.i2coc
+Compiling architecture sim of entity gaisler.sram [\sram(index=4,abits=22,fname="pr...]
+Compiling architecture sim of entity gaisler.sram [\sram(index=5,abits=22,fname="pr...]
+Compiling architecture sim of entity gaisler.ddr3ram [\ddr3ram(width=64,abits=14,rowbi...]
+Compiling architecture behavioral of entity gaisler.phy [\phy(address=7,base100_t4=1,base...]
+Compiling architecture rtl of entity grlib.ahbmst [\ahbmst(venid=1,devid=7)\]
+Compiling architecture rtl of entity gaisler.dcom_uart [\dcom_uart(paddr=7)\]
+Compiling architecture struct of entity gaisler.dcom [dcom_default]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="ahbuart0:_...]
+Compiling architecture struct of entity gaisler.ahbuart [\ahbuart(paddr=7)\]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture rtl of entity techmap.clkbuf_xilinx [\clkbuf_xilinx(buftype=2)\]
+Compiling architecture rtl of entity techmap.techbuf [\techbuf(buftype=2,tech=49)\]
+Compiling architecture rtl of entity techmap.grdff [\grdff(tech=0)\]
+Compiling architecture rtl of entity gaisler.jtagcom2 [\jtagcom2(gatetech=49,isel=1)\]
+Compiling architecture rtl of entity grlib.ahbmst [\ahbmst(hindex=1,venid=1,devid=2...]
+Compiling architecture bscane2_v of entity unisim.BSCANE2 [\BSCANE2(1,5)\]
+Compiling architecture bscane2_v of entity unisim.BSCANE2 [\BSCANE2(jtag_chain=2)(1,5)\]
+Compiling architecture rtl of entity techmap.kintex7_tap [kintex7_tap_default]
+Compiling architecture rtl of entity techmap.tap [\tap(tech=49,irlen=6)\]
+Compiling architecture rtl of entity grlib.trstmux [\trstmux(scantest=0)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="ahbjtag_AH...]
+Compiling architecture struct of entity gaisler.ahbjtag [\ahbjtag(tech=49,hindex=1)\]
+Compiling architecture rtl of entity esa.mctrl [\mctrl(pindex=1,iomask=0,rammask...]
+Compiling architecture rtl of entity techmap.outpadv [\outpadv(tech=49,level=1,voltage...]
+Compiling architecture rtl of entity techmap.iopadvv [\iopadvv(tech=49,level=1,voltage...]
+Compiling architecture behav of entity techmap.generic_syncram_2p [\generic_syncram_2p(abits=3,dbit...]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(abits=3,dbits=64)\]
+Compiling architecture rtl of entity gaisler.ahb2axib [\ahb2axib(hindex=1,axi4=1,ahb_en...]
+Compiling architecture rtl of entity gaisler.ahb2axi4b [\ahb2axi4b(hindex=1,ahb_endianne...]
+Compiling architecture rtl of entity gaisler.ahb2axi_mig_7series [\ahb2axi_mig_7series(hindex=1,ha...]
+Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=16,clki...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="clkgen_vir...]
+Compiling architecture struct of entity techmap.clkgen_virtex7 [\clkgen_virtex7(clk_mul=16,clk_d...]
+Compiling architecture struct of entity techmap.clkgen [\clkgen(tech=49,clk_mul=16,clk_d...]
+Compiling architecture behav of entity techmap.generic_syncram_2p [\generic_syncram_2p(abits=3)\]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=3,dbit...]
+Compiling architecture behav of entity techmap.kintex7_syncram_2p [\kintex7_syncram_2p(abits=9,dbit...]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=9,dbit...]
+Compiling architecture rtl of entity eth.eth_rstgen [eth_rstgen_default]
+Compiling architecture rtl of entity eth.greth_tx [greth_tx_default]
+Compiling architecture rtl of entity eth.greth_rx [greth_rx_default]
+Compiling architecture rtl of entity eth.eth_edcl_ahb_mst [eth_edcl_ahb_mst_default]
+Compiling architecture rtl of entity eth.eth_ahb_mst [eth_ahb_mst_default]
+Compiling architecture rtl of entity eth.grethc [\grethc(mdcscaler=100,enable_mdi...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="greth1:_10...]
+Compiling architecture rtl of entity gaisler.greth_mb [\greth_mb(hindex=1,ehindex=2,pin...]
+Compiling architecture rtl of entity gaisler.grethm_mb [\grethm_mb(hindex=1,ehindex=2,pi...]
+Compiling architecture idelayctrl_v of entity unisim.IDELAYCTRL [\IDELAYCTRL(1,7)\]
+Compiling architecture idelaye2_v of entity unisim.IDELAYE2 [\IDELAYE2(idelay_value=20)(1,5)(...]
+Compiling architecture iodelaye1_v of entity unisim.IODELAYE1 [\IODELAYE1(idelay_type="FIXED",i...]
+Compiling architecture rtl of entity techmap.clkmux [clkmux_default]
+Compiling architecture oddr_v of entity unisim.ODDR [\ODDR(ddr_clk_edge="SAME_EDGE")(...]
+Compiling architecture rtl of entity techmap.unisim_oddr_reg [\unisim_oddr_reg(tech=49,arch=1)...]
+Compiling architecture rtl of entity techmap.ddr_oreg [\ddr_oreg(tech=49,arch=1)\]
+Compiling architecture tmap of entity techmap.syncreg [syncreg_default]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="rgmii4:_RG...]
+Compiling architecture rtl of entity gaisler.rgmii_kc705 [\rgmii_kc705(pindex=4,paddr=16,p...]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(iostandard="LVCMOS25",slew...]
+Compiling architecture rtl of entity techmap.unisim_outpad [\unisim_outpad(level=1,slew=1,vo...]
+Compiling architecture rtl of entity techmap.outpad [\outpad(tech=49,level=1,slew=1,v...]
+Compiling architecture rtl of entity techmap.inpadv [\inpadv(tech=49,level=1,voltage=...]
+Compiling architecture rtl of entity techmap.outpadv [\outpadv(tech=49,level=1,slew=1,...]
+Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=20,clki...]
+Compiling architecture structural of entity opencores.i2c_master_bit_ctrl [\i2c_master_bit_ctrl(filter=9,dy...]
+Compiling architecture structural of entity opencores.i2c_master_byte_ctrl [\i2c_master_byte_ctrl(filter=9,d...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="i2cmst5:_A...]
+Compiling architecture rtl of entity gaisler.i2cmst [\i2cmst(pindex=5,paddr=9,pirq=4,...]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(iostandard="LVCMOS15")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_inpad [\unisim_inpad(level=1,voltage=15...]
+Compiling architecture rtl of entity techmap.inpad [\inpad(tech=49,level=1,voltage=1...]
+Compiling architecture rtl of entity gaisler.rstgen [\rstgen(acthigh=1)\]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=7,dbit...]
+Compiling architecture rtl of entity gaisler.regfile5_ram [\regfile5_ram(tech=49,abits=7,db...]
+Compiling architecture rtl of entity gaisler.nanofpu [nanofpu_default]
+Compiling architecture behav of entity techmap.kintex7_syncram_2p [\kintex7_syncram_2p(abits=7)\]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=7,dbit...]
+Compiling architecture rtl of entity gaisler.bht_pap [\bht_pap(tech=49,nentries=128,hl...]
+Compiling architecture rtl of entity gaisler.btb [\btb(nentries=16)\]
+Compiling architecture rtl of entity gaisler.iu5 [\iu5(nwin=8,iways=4,dways=4,muli...]
+Compiling architecture simple of entity techmap.gen_mult_pipe [\gen_mult_pipe(a_width=33,b_widt...]
+Compiling architecture rtl of entity techmap.techmult [\techmult(tech=49,a_width=33,b_w...]
+Compiling architecture rtl of entity gaisler.mul32 [\mul32(tech=49,multype=3,pipe=1)...]
+Compiling architecture rtl of entity gaisler.div32 [div32_default]
+Compiling architecture rtl of entity gaisler.cctrl5 [\cctrl5(hindex=0,iways=4,ilinesi...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=7,dbits=2...]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=7,dbits=2...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=9)\]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=9,dbits=3...]
+Compiling architecture behav of entity techmap.kintex7_syncram_2p [\kintex7_syncram_2p(abits=7,dbit...]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=7,dbit...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=7,dbits=2...]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=7,dbits=2...]
+Compiling architecture rtl of entity gaisler.cachemem5 [\cachemem5(tech=49,iways=4,iline...]
+Compiling architecture hier of entity gaisler.cpucore5 [\cpucore5(hindex=0,fabtech=49,me...]
+Compiling architecture rtl of entity grlib.ahbctrl [\ahbctrl(rrobin=1,nahbm=3,nahbs=...]
+Compiling architecture rtl of entity grlib.apbctrlx [\apbctrlx(hindex0=3,haddr0=2048,...]
+Compiling architecture struct of entity grlib.apbctrl [\apbctrl(hindex=3,haddr=2048,nsl...]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_a="0000...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(read_width_a=36,read_w...]
+Compiling architecture ramb16_s36_s36_v of entity unisim.RAMB16_S36_S36 [\RAMB16_S36_S36(sim_collision_ch...]
+Compiling architecture behav of entity techmap.unisim_syncram64 [\unisim_syncram64(abits=8)\]
+Compiling architecture rtl of entity techmap.syncram64 [\syncram64(tech=49,abits=8,custo...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=8)\]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=8,dbits=3...]
+Compiling architecture rtl of entity gaisler.tbufmem5 [\tbufmem5(tech=49,tbuf=4)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="dsu5_0:_LE...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=7,dbits=6...]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=7,dbits=6...]
+Compiling architecture rtl of entity gaisler.itbufmem5 [\itbufmem5(tech=49,entry=256,tes...]
+Compiling architecture rtl of entity gaisler.dbgmod5 [\dbgmod5(fabtech=49,memtech=49,n...]
+Compiling architecture rtl of entity techmap.grnand2 [\grnand2(tech=49)\]
+Compiling architecture a of entity techmap.cdcbus [\cdcbus(tech=49,width=16)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="apbuart6:_...]
+Compiling architecture rtl of entity gaisler.apbuart [\apbuart(pindex=6,paddr=1,pirq=2...]
+Compiling architecture sim of entity gaisler.uartprint [uartprint_default]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="irqmp:_Mul...]
+Compiling architecture rtl of entity gaisler.irqmp5 [\irqmp5(pindex=7,paddr=2,pmask=4...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="gptimer8:_...]
+Compiling architecture rtl of entity gaisler.gptimer [\gptimer(pindex=8,paddr=3,pirq=8...]
+Compiling architecture hier of entity gaisler.leon5sys [\leon5sys(fabtech=49,memtech=49,...]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(iostandard="LVCMOS15")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_outpad [\unisim_outpad(level=1,voltage=1...]
+Compiling architecture rtl of entity techmap.outpad [\outpad(tech=49,level=1,voltage=...]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(iostandard="LVCMOS25")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_inpad [\unisim_inpad(level=1,voltage=2)...]
+Compiling architecture rtl of entity techmap.inpad [\inpad(tech=49,level=1,voltage=2...]
+Compiling architecture iobuf_v of entity unisim.IOBUF [\IOBUF(iostandard="LVCMOS25")(1,...]
+Compiling architecture rtl of entity techmap.unisim_iopad [\unisim_iopad(level=1,voltage=2)...]
+Compiling architecture rtl of entity techmap.iopad [\iopad(tech=49,level=1,voltage=2...]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(iostandard="LVCMOS25")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_outpad [\unisim_outpad(level=1,voltage=2...]
+Compiling architecture rtl of entity techmap.outpad [\outpad(tech=49,level=1,voltage=...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="testmod2:_...]
+Compiling architecture rtl of entity gaisler.ahbrep [\ahbrep(hindex=2,haddr=512)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="LEON/GRLIB...]
+Compiling architecture beh of entity grlib.report_design [\report_design(msg1="LEON/GRLIB_...]
+Compiling architecture rtl of entity work.leon5mp [\leon5mp(fabtech=49,memtech=49,p...]
+Compiling architecture behav of entity work.testbench
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Feb  8 15:53:20 2023. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Feb  8 15:53:20 2023...
+run_program: Time (s): cpu = 00:08:15 ; elapsed = 00:07:29 . Memory (MB): peak = 7114.129 ; gain = 0.000 ; free physical = 7306 ; free virtual = 47226
+INFO: [USF-XSim-69] 'elaborate' step finished in '449' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:08:23 ; elapsed = 00:07:35 . Memory (MB): peak = 7114.129 ; gain = 0.000 ; free physical = 7046 ; free virtual = 46978
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 389
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 390
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 391
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+remove_bps -file {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} -line 391
+remove_bps -file {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} -line 390
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: RESETn raised with less than 200 us init delay
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE not low when RESETn deasserted
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE raised with less than 500 us delay after RESETn deasserted
+Time: 701 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+remove_bps -file {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} -line 389
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 181
+run all
+Stopped at time : 0 fs : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 373
+run all
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+Stopped at time : 2500 ps : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+run all
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+Stopped at time : 5 ns : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+step
+Stopped at time : 5 ns : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 349
+run all
+Stopped at time : 7500 ps : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+remove_bps -file {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} -line 181
+run all
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: RESETn raised with less than 200 us init delay
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE not low when RESETn deasserted
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE raised with less than 500 us delay after RESETn deasserted
+Time: 701 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+remove_bps -all
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 372
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: RESETn raised with less than 200 us init delay
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE not low when RESETn deasserted
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE raised with less than 500 us delay after RESETn deasserted
+Time: 701 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7114.129 ; gain = 0.000 ; free physical = 566 ; free virtual = 40860
+remove_bps -all
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 357
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Stopped at time : 0 fs : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 357
+remove_bps -file {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} -line 357
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 369
+run all
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: RESETn raised with less than 200 us init delay
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE not low when RESETn deasserted
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE raised with less than 500 us delay after RESETn deasserted
+Time: 701 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7321.293 ; gain = 0.000 ; free physical = 3855 ; free virtual = 44056
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Simulation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci
+
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim/prom.srec'
+INFO: [SIM-utils-43] Exported '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim/ram.srec'
+WARNING: [SIM-utils-52] IP component XML file does not exist: '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj testbench_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Simulation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci
+
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.sim/sim_1/behav/xsim'
+xelab -wto af633894d4814a8d85b5bc8948905381 --incr --debug typical --relax --mt 8 -L grlib -L techmap -L gaisler -L work -L eth -L opencores -L esa -L secureip -L xpm --snapshot testbench_behav work.testbench -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto af633894d4814a8d85b5bc8948905381 --incr --debug typical --relax --mt 8 -L grlib -L techmap -L gaisler -L work -L eth -L opencores -L esa -L secureip -L xpm --snapshot testbench_behav work.testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-4940] 'mig' remains a black box since it has no binding entity [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:233]
+WARNING: [VRFC 10-4940] 'iddr' remains a black box since it has no binding entity [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/adapters/rgmii_kc705.vhd:318]
+WARNING: [VRFC 10-4940] 'iddr' remains a black box since it has no binding entity [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/greth/adapters/rgmii_kc705.vhd:335]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package grlib.config_types
+Compiling package grlib.config
+Compiling package grlib.version
+Compiling package grlib.stdlib
+Compiling package grlib.amba
+Compiling package gaisler.uart
+Compiling package grlib.devices
+Compiling package techmap.gencomp
+Compiling package gaisler.misc
+Compiling package gaisler.libdcom
+Compiling package grlib.stdio
+Compiling package gaisler.sim
+Compiling package work.debug
+Compiling package work.config
+Compiling package techmap.allclkgen
+Compiling package gaisler.memctrl
+Compiling package gaisler.leon3
+Compiling package gaisler.leon5
+Compiling package gaisler.spi
+Compiling package gaisler.i2c
+Compiling package gaisler.net
+Compiling package gaisler.jtag
+Compiling package gaisler.l2cache
+Compiling package gaisler.subsys
+Compiling package gaisler.axi
+Compiling package esa.memoryctrl
+Compiling package techmap.allpads
+Compiling package gaisler.arith
+Compiling package gaisler.leon5int
+Compiling package ieee.math_real
+Compiling package grlib.testlib
+Compiling package grlib.sparc
+Compiling package grlib.sparc_disas
+Compiling package techmap.allmem
+Compiling package grlib.multlib
+Compiling package techmap.allmul
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_textio
+Compiling package grlib.dftlib
+Compiling package gaisler.libjtagcom
+Compiling package techmap.alltap
+Compiling package gaisler.ethernet_mac
+Compiling package eth.ethcomp
+Compiling package eth.grethpkg
+Compiling package techmap.allddr
+Compiling package opencores.i2coc
+Compiling architecture sim of entity gaisler.sram [\sram(index=4,abits=22,fname="pr...]
+Compiling architecture sim of entity gaisler.sram [\sram(index=5,abits=22,fname="pr...]
+Compiling architecture sim of entity gaisler.ddr3ram [\ddr3ram(width=64,abits=14,rowbi...]
+Compiling architecture behavioral of entity gaisler.phy [\phy(address=7,base100_t4=1,base...]
+Compiling architecture rtl of entity grlib.ahbmst [\ahbmst(venid=1,devid=7)\]
+Compiling architecture rtl of entity gaisler.dcom_uart [\dcom_uart(paddr=7)\]
+Compiling architecture struct of entity gaisler.dcom [dcom_default]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="ahbuart0:_...]
+Compiling architecture struct of entity gaisler.ahbuart [\ahbuart(paddr=7)\]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture rtl of entity techmap.clkbuf_xilinx [\clkbuf_xilinx(buftype=2)\]
+Compiling architecture rtl of entity techmap.techbuf [\techbuf(buftype=2,tech=49)\]
+Compiling architecture rtl of entity techmap.grdff [\grdff(tech=0)\]
+Compiling architecture rtl of entity gaisler.jtagcom2 [\jtagcom2(gatetech=49,isel=1)\]
+Compiling architecture rtl of entity grlib.ahbmst [\ahbmst(hindex=1,venid=1,devid=2...]
+Compiling architecture bscane2_v of entity unisim.BSCANE2 [\BSCANE2(1,5)\]
+Compiling architecture bscane2_v of entity unisim.BSCANE2 [\BSCANE2(jtag_chain=2)(1,5)\]
+Compiling architecture rtl of entity techmap.kintex7_tap [kintex7_tap_default]
+Compiling architecture rtl of entity techmap.tap [\tap(tech=49,irlen=6)\]
+Compiling architecture rtl of entity grlib.trstmux [\trstmux(scantest=0)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="ahbjtag_AH...]
+Compiling architecture struct of entity gaisler.ahbjtag [\ahbjtag(tech=49,hindex=1)\]
+Compiling architecture rtl of entity esa.mctrl [\mctrl(pindex=1,iomask=0,rammask...]
+Compiling architecture rtl of entity techmap.outpadv [\outpadv(tech=49,level=1,voltage...]
+Compiling architecture rtl of entity techmap.iopadvv [\iopadvv(tech=49,level=1,voltage...]
+Compiling architecture behav of entity techmap.generic_syncram_2p [\generic_syncram_2p(abits=3,dbit...]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(abits=3,dbits=64)\]
+Compiling architecture rtl of entity gaisler.ahb2axib [\ahb2axib(hindex=1,axi4=1,ahb_en...]
+Compiling architecture rtl of entity gaisler.ahb2axi4b [\ahb2axi4b(hindex=1,ahb_endianne...]
+Compiling architecture rtl of entity gaisler.ahb2axi_mig_7series [\ahb2axi_mig_7series(hindex=1,ha...]
+Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=16,clki...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="clkgen_vir...]
+Compiling architecture struct of entity techmap.clkgen_virtex7 [\clkgen_virtex7(clk_mul=16,clk_d...]
+Compiling architecture struct of entity techmap.clkgen [\clkgen(tech=49,clk_mul=16,clk_d...]
+Compiling architecture behav of entity techmap.generic_syncram_2p [\generic_syncram_2p(abits=3)\]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=3,dbit...]
+Compiling architecture behav of entity techmap.kintex7_syncram_2p [\kintex7_syncram_2p(abits=9,dbit...]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=9,dbit...]
+Compiling architecture rtl of entity eth.eth_rstgen [eth_rstgen_default]
+Compiling architecture rtl of entity eth.greth_tx [greth_tx_default]
+Compiling architecture rtl of entity eth.greth_rx [greth_rx_default]
+Compiling architecture rtl of entity eth.eth_edcl_ahb_mst [eth_edcl_ahb_mst_default]
+Compiling architecture rtl of entity eth.eth_ahb_mst [eth_ahb_mst_default]
+Compiling architecture rtl of entity eth.grethc [\grethc(mdcscaler=100,enable_mdi...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="greth1:_10...]
+Compiling architecture rtl of entity gaisler.greth_mb [\greth_mb(hindex=1,ehindex=2,pin...]
+Compiling architecture rtl of entity gaisler.grethm_mb [\grethm_mb(hindex=1,ehindex=2,pi...]
+Compiling architecture idelayctrl_v of entity unisim.IDELAYCTRL [\IDELAYCTRL(1,7)\]
+Compiling architecture idelaye2_v of entity unisim.IDELAYE2 [\IDELAYE2(idelay_value=20)(1,5)(...]
+Compiling architecture iodelaye1_v of entity unisim.IODELAYE1 [\IODELAYE1(idelay_type="FIXED",i...]
+Compiling architecture rtl of entity techmap.clkmux [clkmux_default]
+Compiling architecture oddr_v of entity unisim.ODDR [\ODDR(ddr_clk_edge="SAME_EDGE")(...]
+Compiling architecture rtl of entity techmap.unisim_oddr_reg [\unisim_oddr_reg(tech=49,arch=1)...]
+Compiling architecture rtl of entity techmap.ddr_oreg [\ddr_oreg(tech=49,arch=1)\]
+Compiling architecture tmap of entity techmap.syncreg [syncreg_default]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="rgmii4:_RG...]
+Compiling architecture rtl of entity gaisler.rgmii_kc705 [\rgmii_kc705(pindex=4,paddr=16,p...]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(iostandard="LVCMOS25",slew...]
+Compiling architecture rtl of entity techmap.unisim_outpad [\unisim_outpad(level=1,slew=1,vo...]
+Compiling architecture rtl of entity techmap.outpad [\outpad(tech=49,level=1,slew=1,v...]
+Compiling architecture rtl of entity techmap.inpadv [\inpadv(tech=49,level=1,voltage=...]
+Compiling architecture rtl of entity techmap.outpadv [\outpadv(tech=49,level=1,slew=1,...]
+Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=20,clki...]
+Compiling architecture structural of entity opencores.i2c_master_bit_ctrl [\i2c_master_bit_ctrl(filter=9,dy...]
+Compiling architecture structural of entity opencores.i2c_master_byte_ctrl [\i2c_master_byte_ctrl(filter=9,d...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="i2cmst5:_A...]
+Compiling architecture rtl of entity gaisler.i2cmst [\i2cmst(pindex=5,paddr=9,pirq=4,...]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(iostandard="LVCMOS15")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_inpad [\unisim_inpad(level=1,voltage=15...]
+Compiling architecture rtl of entity techmap.inpad [\inpad(tech=49,level=1,voltage=1...]
+Compiling architecture rtl of entity gaisler.rstgen [\rstgen(acthigh=1)\]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=7,dbit...]
+Compiling architecture rtl of entity gaisler.regfile5_ram [\regfile5_ram(tech=49,abits=7,db...]
+Compiling architecture rtl of entity gaisler.nanofpu [nanofpu_default]
+Compiling architecture behav of entity techmap.kintex7_syncram_2p [\kintex7_syncram_2p(abits=7)\]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=7,dbit...]
+Compiling architecture rtl of entity gaisler.bht_pap [\bht_pap(tech=49,nentries=128,hl...]
+Compiling architecture rtl of entity gaisler.btb [\btb(nentries=16)\]
+Compiling architecture rtl of entity gaisler.iu5 [\iu5(nwin=8,iways=4,dways=4,muli...]
+Compiling architecture simple of entity techmap.gen_mult_pipe [\gen_mult_pipe(a_width=33,b_widt...]
+Compiling architecture rtl of entity techmap.techmult [\techmult(tech=49,a_width=33,b_w...]
+Compiling architecture rtl of entity gaisler.mul32 [\mul32(tech=49,multype=3,pipe=1)...]
+Compiling architecture rtl of entity gaisler.div32 [div32_default]
+Compiling architecture rtl of entity gaisler.cctrl5 [\cctrl5(hindex=0,iways=4,ilinesi...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=7,dbits=2...]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=7,dbits=2...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=9)\]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=9,dbits=3...]
+Compiling architecture behav of entity techmap.kintex7_syncram_2p [\kintex7_syncram_2p(abits=7,dbit...]
+Compiling architecture rtl of entity techmap.memrwcol [\memrwcol(techwrfst=0,techrwcol=...]
+Compiling architecture rtl of entity techmap.syncram_2p [\syncram_2p(tech=49,abits=7,dbit...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=7,dbits=2...]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=7,dbits=2...]
+Compiling architecture rtl of entity gaisler.cachemem5 [\cachemem5(tech=49,iways=4,iline...]
+Compiling architecture hier of entity gaisler.cpucore5 [\cpucore5(hindex=0,fabtech=49,me...]
+Compiling architecture rtl of entity grlib.ahbctrl [\ahbctrl(rrobin=1,nahbm=3,nahbs=...]
+Compiling architecture rtl of entity grlib.apbctrlx [\apbctrlx(hindex0=3,haddr0=2048,...]
+Compiling architecture struct of entity grlib.apbctrl [\apbctrl(hindex=3,haddr=2048,nsl...]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_a="0000...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(read_width_a=36,read_w...]
+Compiling architecture ramb16_s36_s36_v of entity unisim.RAMB16_S36_S36 [\RAMB16_S36_S36(sim_collision_ch...]
+Compiling architecture behav of entity techmap.unisim_syncram64 [\unisim_syncram64(abits=8)\]
+Compiling architecture rtl of entity techmap.syncram64 [\syncram64(tech=49,abits=8,custo...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=8)\]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=8,dbits=3...]
+Compiling architecture rtl of entity gaisler.tbufmem5 [\tbufmem5(tech=49,tbuf=4)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="dsu5_0:_LE...]
+Compiling architecture behav of entity techmap.kintex7_syncram [\kintex7_syncram(abits=7,dbits=6...]
+Compiling architecture rtl of entity techmap.syncram [\syncram(tech=49,abits=7,dbits=6...]
+Compiling architecture rtl of entity gaisler.itbufmem5 [\itbufmem5(tech=49,entry=256,tes...]
+Compiling architecture rtl of entity gaisler.dbgmod5 [\dbgmod5(fabtech=49,memtech=49,n...]
+Compiling architecture rtl of entity techmap.grnand2 [\grnand2(tech=49)\]
+Compiling architecture a of entity techmap.cdcbus [\cdcbus(tech=49,width=16)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="apbuart6:_...]
+Compiling architecture rtl of entity gaisler.apbuart [\apbuart(pindex=6,paddr=1,pirq=2...]
+Compiling architecture sim of entity gaisler.uartprint [uartprint_default]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="irqmp:_Mul...]
+Compiling architecture rtl of entity gaisler.irqmp5 [\irqmp5(pindex=7,paddr=2,pmask=4...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="gptimer8:_...]
+Compiling architecture rtl of entity gaisler.gptimer [\gptimer(pindex=8,paddr=3,pirq=8...]
+Compiling architecture hier of entity gaisler.leon5sys [\leon5sys(fabtech=49,memtech=49,...]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(iostandard="LVCMOS15")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_outpad [\unisim_outpad(level=1,voltage=1...]
+Compiling architecture rtl of entity techmap.outpad [\outpad(tech=49,level=1,voltage=...]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(iostandard="LVCMOS25")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_inpad [\unisim_inpad(level=1,voltage=2)...]
+Compiling architecture rtl of entity techmap.inpad [\inpad(tech=49,level=1,voltage=2...]
+Compiling architecture iobuf_v of entity unisim.IOBUF [\IOBUF(iostandard="LVCMOS25")(1,...]
+Compiling architecture rtl of entity techmap.unisim_iopad [\unisim_iopad(level=1,voltage=2)...]
+Compiling architecture rtl of entity techmap.iopad [\iopad(tech=49,level=1,voltage=2...]
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(iostandard="LVCMOS25")(1,9...]
+Compiling architecture rtl of entity techmap.unisim_outpad [\unisim_outpad(level=1,voltage=2...]
+Compiling architecture rtl of entity techmap.outpad [\outpad(tech=49,level=1,voltage=...]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="testmod2:_...]
+Compiling architecture rtl of entity gaisler.ahbrep [\ahbrep(hindex=2,haddr=512)\]
+Compiling architecture beh of entity grlib.report_version [\report_version(msg1="LEON/GRLIB...]
+Compiling architecture beh of entity grlib.report_design [\report_design(msg1="LEON/GRLIB_...]
+Compiling architecture rtl of entity work.leon5mp [\leon5mp(fabtech=49,memtech=49,p...]
+Compiling architecture behav of entity work.testbench
+Built simulation snapshot testbench_behav
+run_program: Time (s): cpu = 00:07:47 ; elapsed = 00:07:24 . Memory (MB): peak = 7321.293 ; gain = 0.000 ; free physical = 3687 ; free virtual = 43915
+INFO: [USF-XSim-69] 'elaborate' step finished in '444' seconds
+launch_simulation: Time (s): cpu = 00:07:47 ; elapsed = 00:07:24 . Memory (MB): peak = 7321.293 ; gain = 0.000 ; free physical = 3687 ; free virtual = 43915
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Warning: RESETn not asserted on power-up
+Time: 1 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+relaunch_sim: Time (s): cpu = 00:08:13 ; elapsed = 00:07:30 . Memory (MB): peak = 7321.293 ; gain = 0.000 ; free physical = 3549 ; free virtual = 43684
+remove_bps -file {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} -line 369
+run 1 us
+run 500 us
+Warning: RESETn raised with less than 200 us init delay
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+Warning: CKE not low when RESETn deasserted
+Time: 201 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+run 500 us
+Warning: CKE raised with less than 500 us delay after RESETn deasserted
+Time: 701 us  Iteration: 0  Process: /testbench/gen_mem_model/ddr3mem/u1/initp  File: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/sim/ddr3ram.vhd
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_bp {/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd} 181
+run all
+Stopped at time : 0 fs : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+run all
+LEON/GRLIB Xilinx KC705 Demonstration design
+GRLIB Version 2022.4.0, build 4280
+Target technology: kintex7   , memory library: kintex7   
+Stopped at time : 2500 ps : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+run all
+i2cmst5: AMBA Wrapper for OC I2C-master rev 3, irq 4
+rgmii4: RGMII rev 1, irq 11
+greth1: 10/100 Mbit Ethernet MAC rev 01, EDCL 1, buffer 2 kbyte 128 txfifo, irq 3
+clkgen_virtex7: virtex-7 sdram/pci clock generator, version 1
+clkgen_virtex7: Frequency 100000 KHz, DCM divisor 16/8
+ahbjtag AHB Debug JTAG rev 2
+ahbuart0: AHB Debug UART rev 0
+testmod2: Test report module
+gptimer8: Timer Unit rev 1, 16-bit scaler, 2 32-bit timers, irq 8
+irqmp: Multi-processor Interrupt Controller rev 4, #cpu 1, eirq 12
+apbuart6: Generic UART rev 1, fifo 8, irq 2, scaler bits 12
+dsu5_0: LEON5 Debug support unit + AHB Trace Buffer, 4 kbytes
+Stopped at time : 5 ns : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+run all
+Stopped at time : 7500 ps : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+run all
+leon5sys: LEON5 subsystem with 1 cores
+leon5sys: ---------------------------------------------------
+leon5sys:   Debug masters:
+leon5sys:       0 ext#0  AHB Debug UART                  
+leon5sys:       1 ext#1  JTAG Debug Link                 
+leon5sys:       2 ext#2  EDCL master interface           
+leon5sys:   CPU bus masters:
+leon5sys:       0 int    LEON5 SPARC V8 Processor        
+leon5sys:       1 ext#1  GR Ethernet MAC                 
+leon5sys:       2 int    LEON5 Debug Support Unit        
+leon5sys:   CPU bus slaves:
+leon5sys:       0 int    AHB/APB Bridge                  
+leon5sys:       1 ext#0  LEON2 Memory Controller         
+leon5sys:       2 ext#1  Xilinx MIG Controller           
+leon5sys:       3 ext#2  Test report module              
+leon5sys:   APB bus slaves:
+leon5sys:       0 int    Generic UART                    
+leon5sys:       1 int    Multi-processor Interrupt Ctrl. 
+leon5sys:       2 int    Modular Timer Unit              
+leon5sys:       3 ext#0  AHB Debug UART                  
+leon5sys:       4 ext#1  LEON2 Memory Controller         
+leon5sys:       5 ext#2  Xilinx MIG Controller           
+leon5sys:       6 ext#3  GR Ethernet MAC                 
+leon5sys:       7 ext#4  Gaisler RGMII Interface         
+leon5sys:       8 ext#5  AMBA Wrapper for OC I2C-master  
+leon5sys: ---------------------------------------------------
+leon5sys:   Memory map:
+leon5sys:     0x00000000-0x1fffffff LEON2 Memory Controller         
+leon5sys:     0x20000000-0x200fffff Test report module              
+leon5sys:     0x20100000-0x3fffffff Unmapped AHB space
+leon5sys:     0x40000000-0x7fffffff Xilinx MIG Controller           
+leon5sys:     0x80000000-0x800fffff AHB/APB Bridge                  
+leon5sys:       0x80000000-0x800000ff LEON2 Memory Controller         
+leon5sys:       0x80000100-0x800001ff Generic UART                    
+leon5sys:       0x80000200-0x800002ff Multi-processor Interrupt Ctrl. 
+leon5sys:       0x80000300-0x800003ff Modular Timer Unit              
+leon5sys:       0x80000400-0x800004ff Xilinx MIG Controller           
+leon5sys:       0x80000500-0x800006ff Unmapped APB space
+leon5sys:       0x80000700-0x800007ff AHB Debug UART                  
+leon5sys:       0x80000800-0x800008ff Unmapped APB space
+leon5sys:       0x80000900-0x800009ff AMBA Wrapper for OC I2C-master  
+leon5sys:       0x80000a00-0x80000fff Unmapped APB space
+leon5sys:       0x80001000-0x80001fff Gaisler RGMII Interface         
+leon5sys:       0x80002000-0x800bffff Unmapped APB space
+leon5sys:       0x800c0000-0x800fffff GR Ethernet MAC                 
+leon5sys:     0x80100000-0xffffefff Unmapped AHB space
+leon5sys:     0xfffff000-0xffffffff Plug'n'play table
+leon5sys: ---------------------------------------------------
+Stopped at time : 10 ns : File "/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/testbench.vhd" Line 181
+CRITICAL WARNING: [IP_Flow 19-4309] IP 'mig' is locked, parameter file paths could not be changed. Please ensure the IP is unlocked and retry the SaveAs/Import operation.
+upgrade_ip -vlnv xilinx.com:ip:mig_7series:4.2 [get_ips  mig] -log ip_upgrade.log
+Upgrading 'mig'
+INFO: [IP_Flow 19-1972] Upgraded mig from Memory Interface Generator (MIG 7 Series) 4.0 to Memory Interface Generator (MIG 7 Series) 4.2
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'mig'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7321.293 ; gain = 0.000 ; free physical = 7092 ; free virtual = 47653
+export_ip_user_files -of_objects [get_ips mig] -no_script -sync -force -quiet
+generate_target all [get_files  /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mig'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mig'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'mig'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'mig'...
+generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 7584.277 ; gain = 0.000 ; free physical = 6900 ; free virtual = 47457
+export_ip_user_files -of_objects [get_files /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.srcs/sources_1/ip/mig/mig.xci] -directory /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.ip_user_files/sim_scripts -ip_user_files_dir /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.ip_user_files -ipstatic_source_dir /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.cache/compile_simlib/modelsim} {questa=/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.cache/compile_simlib/questa} {ies=/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.cache/compile_simlib/ies} {xcelium=/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.cache/compile_simlib/xcelium} {vcs=/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.cache/compile_simlib/vcs} {riviera=/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-xilinx-kc705/vivado/leon5-xilinx-kc705/leon5-xilinx-kc705.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  8 18:43:42 2023...
