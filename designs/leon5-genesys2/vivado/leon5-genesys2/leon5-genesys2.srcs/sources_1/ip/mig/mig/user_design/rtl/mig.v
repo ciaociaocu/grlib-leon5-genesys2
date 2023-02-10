@@ -69,11 +69,11 @@
 
 module mig (
   // Inouts
-  inout [63:0]       ddr3_dq,
-  inout [7:0]        ddr3_dqs_n,
-  inout [7:0]        ddr3_dqs_p,
+  inout [31:0]       ddr3_dq,
+  inout [3:0]        ddr3_dqs_n,
+  inout [3:0]        ddr3_dqs_p,
   // Outputs
-  output [13:0]     ddr3_addr,
+  output [14:0]     ddr3_addr,
   output [2:0]        ddr3_ba,
   output            ddr3_ras_n,
   output            ddr3_cas_n,
@@ -83,7 +83,7 @@ module mig (
   output [0:0]       ddr3_ck_n,
   output [0:0]       ddr3_cke,
   output [0:0]        ddr3_cs_n,
-  output [7:0]     ddr3_dm,
+  output [3:0]     ddr3_dm,
   output [0:0]       ddr3_odt,
   // Inputs
   // Differential system clocks

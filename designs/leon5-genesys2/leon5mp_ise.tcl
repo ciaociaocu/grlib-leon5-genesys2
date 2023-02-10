@@ -742,6 +742,8 @@ xfile add "leon5mp.vhd" -lib_vhdl work
 puts "leon5mp.vhd"
 xfile add "ddr_dummy.vhd" -lib_vhdl work
 puts "ddr_dummy.vhd"
+xfile add "ahb2axi_mig_7series.vhd" -lib_vhdl work
+puts "ahb2axi_mig_7series.vhd"
 project set top "rtl" "leon5mp"
 project set "Bus Delimiter" ()
 project set "FSM Encoding Algorithm" None

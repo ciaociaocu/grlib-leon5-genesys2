@@ -81,7 +81,7 @@ set MGCPART {}
 set ISETECH {Kintex7}
 set QSF {}
 set VHDLOPTSYNFILES {}
-set VHDLSYNFILES {config.vhd ahbrom.vhd leon5mp.vhd ddr_dummy.vhd}
+set VHDLSYNFILES {config.vhd ahbrom.vhd leon5mp.vhd ddr_dummy.vhd ahb2axi_mig_7series.vhd}
 set VHDLIPFILES {}
 set UCF {}
 set GRLIB_SIMULATOR {ModelSim}

@@ -91,20 +91,20 @@ module mig_mig #
    parameter CKE_WIDTH             = 1,
                                      // # of CKE outputs to memory.
    parameter DATA_BUF_ADDR_WIDTH   = 5,
-   parameter DQ_CNT_WIDTH          = 6,
+   parameter DQ_CNT_WIDTH          = 5,
                                      // = ceil(log2(DQ_WIDTH))
    parameter DQ_PER_DM             = 8,
-   parameter DM_WIDTH              = 8,
+   parameter DM_WIDTH              = 4,
                                      // # of DM (data mask)
-   parameter DQ_WIDTH              = 64,
+   parameter DQ_WIDTH              = 32,
                                      // # of DQ (data)
-   parameter DQS_WIDTH             = 8,
-   parameter DQS_CNT_WIDTH         = 3,
+   parameter DQS_WIDTH             = 4,
+   parameter DQS_CNT_WIDTH         = 2,
                                      // = ceil(log2(DQS_WIDTH))
    parameter DRAM_WIDTH            = 8,
                                      // # of DQ per DQS
    parameter ECC                   = "OFF",
-   parameter DATA_WIDTH            = 64,
+   parameter DATA_WIDTH            = 32,
    parameter ECC_TEST              = "OFF",
    parameter PAYLOAD_WIDTH         = (ECC_TEST == "OFF") ? DATA_WIDTH : DQ_WIDTH,
    parameter MEM_ADDR_ORDER        = "BANK_ROW_COLUMN",
@@ -122,9 +122,9 @@ module mig_mig #
                                      // # of Ranks.
    parameter ODT_WIDTH             = 1,
                                      // # of ODT outputs to memory.
-   parameter ROW_WIDTH             = 14,
+   parameter ROW_WIDTH             = 15,
                                      // # of memory Row Address bits.
-   parameter ADDR_WIDTH            = 28,
+   parameter ADDR_WIDTH            = 29,
                                      // # = RANK_WIDTH + BANK_WIDTH
                                      //     + ROW_WIDTH + COL_WIDTH;
                                      // Chip Select is always tied to low for
@@ -155,13 +155,13 @@ module mig_mig #
    parameter PHY_CONTROL_MASTER_BANK = 1,
                                      // The bank index where master PHY_CONTROL resides,
                                      // equal to the PLL residing bank
-   parameter MEM_DENSITY           = "1Gb",
+   parameter MEM_DENSITY           = "4Gb",
                                      // Indicates the density of the Memory part
                                      // Added for the sake of Vivado simulations
-   parameter MEM_SPEEDGRADE        = "125",
+   parameter MEM_SPEEDGRADE        = "107E",
                                      // Indicates the Speed grade of Memory Part
                                      // Added for the sake of Vivado simulations
-   parameter MEM_DEVICE_WIDTH      = 8,
+   parameter MEM_DEVICE_WIDTH      = 16,
                                      // Indicates the device width of the Memory Part
                                      // Added for the sake of Vivado simulations
 
@@ -257,19 +257,19 @@ module mig_mig #
    //***************************************************************************
    parameter tCKE                  = 5000,
                                      // memory tCKE paramter in pS
-   parameter tFAW                  = 30000,
+   parameter tFAW                  = 35000,
                                      // memory tRAW paramter in pS.
    parameter tPRDI                 = 1_000_000,
                                      // memory tPRDI paramter in pS.
-   parameter tRAS                  = 35000,
+   parameter tRAS                  = 34000,
                                      // memory tRAS paramter in pS.
-   parameter tRCD                  = 13750,
+   parameter tRCD                  = 13910,
                                      // memory tRCD paramter in pS.
    parameter tREFI                 = 7800000,
                                      // memory tREFI paramter in pS.
-   parameter tRFC                  = 110000,
+   parameter tRFC                  = 260000,
                                      // memory tRFC paramter in pS.
-   parameter tRP                   = 13750,
+   parameter tRP                   = 13910,
                                      // memory tRP paramter in pS.
    parameter tRRD                  = 6000,
                                      // memory tRRD paramter in pS.
@@ -303,9 +303,9 @@ module mig_mig #
    //***************************************************************************
    parameter BYTE_LANES_B0         = 4'b1111,
                                      // Byte lanes used in an IO column.
-   parameter BYTE_LANES_B1         = 4'b1110,
+   parameter BYTE_LANES_B1         = 4'b1111,
                                      // Byte lanes used in an IO column.
-   parameter BYTE_LANES_B2         = 4'b1111,
+   parameter BYTE_LANES_B2         = 4'b0000,
                                      // Byte lanes used in an IO column.
    parameter BYTE_LANES_B3         = 4'b0000,
                                      // Byte lanes used in an IO column.
@@ -321,7 +321,7 @@ module mig_mig #
                                      // or control Byte lane. '1' in a bit
                                      // position indicates a data byte lane and
                                      // a '0' indicates a control byte lane
-   parameter DATA_CTL_B2           = 4'b1111,
+   parameter DATA_CTL_B2           = 4'b0000,
                                      // Indicates Byte lane is data byte lane
                                      // or control Byte lane. '1' in a bit
                                      // position indicates a data byte lane and
@@ -337,33 +337,33 @@ module mig_mig #
                                      // position indicates a data byte lane and
                                      // a '0' indicates a control byte lane
    parameter PHY_0_BITLANES        = 48'h3FE_3FE_3FE_2FF,
-   parameter PHY_1_BITLANES        = 48'h3FF_FFE_C00_000,
-   parameter PHY_2_BITLANES        = 48'h3FE_3FE_3FE_2FF,
+   parameter PHY_1_BITLANES        = 48'h3FE_FFC_C10_003,
+   parameter PHY_2_BITLANES        = 48'h000_000_000_000,
 
    // control/address/data pin mapping parameters
    parameter CK_BYTE_MAP
      = 144'h00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_13,
    parameter ADDR_MAP
-     = 192'h000_000_139_138_137_136_135_134_133_132_131_130_129_128_127_126,
-   parameter BANK_MAP   = 36'h12B_12A_125,
-   parameter CAS_MAP    = 12'h123,
+     = 192'h000_114_139_138_137_136_135_134_133_132_131_125_128_127_126_12B,
+   parameter BANK_MAP   = 36'h12A_129_124,
+   parameter CAS_MAP    = 12'h122,
    parameter CKE_ODT_BYTE_MAP = 8'h00,
    parameter CKE_MAP    = 96'h000_000_000_000_000_000_000_11B,
    parameter ODT_MAP    = 96'h000_000_000_000_000_000_000_11A,
-   parameter CS_MAP     = 120'h000_000_000_000_000_000_000_000_000_121,
+   parameter CS_MAP     = 120'h000_000_000_000_000_000_000_000_000_100,
    parameter PARITY_MAP = 12'h000,
-   parameter RAS_MAP    = 12'h124,
-   parameter WE_MAP     = 12'h122,
+   parameter RAS_MAP    = 12'h123,
+   parameter WE_MAP     = 12'h101,
    parameter DQS_BYTE_MAP
-     = 144'h00_00_00_00_00_00_00_00_00_00_20_21_22_23_00_01_02_03,
+     = 144'h00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_01_02_03,
    parameter DATA0_MAP  = 96'h031_032_033_034_035_036_037_038,
    parameter DATA1_MAP  = 96'h021_022_023_024_025_026_027_028,
-   parameter DATA2_MAP  = 96'h011_012_013_014_016_017_018_019,
+   parameter DATA2_MAP  = 96'h011_012_013_014_015_016_017_018,
    parameter DATA3_MAP  = 96'h000_001_002_003_004_005_006_007,
-   parameter DATA4_MAP  = 96'h231_232_233_234_235_236_237_238,
-   parameter DATA5_MAP  = 96'h221_222_223_224_225_226_227_228,
-   parameter DATA6_MAP  = 96'h211_212_213_214_216_217_218_219,
-   parameter DATA7_MAP  = 96'h200_201_202_203_204_205_206_207,
+   parameter DATA4_MAP  = 96'h000_000_000_000_000_000_000_000,
+   parameter DATA5_MAP  = 96'h000_000_000_000_000_000_000_000,
+   parameter DATA6_MAP  = 96'h000_000_000_000_000_000_000_000,
+   parameter DATA7_MAP  = 96'h000_000_000_000_000_000_000_000,
    parameter DATA8_MAP  = 96'h000_000_000_000_000_000_000_000,
    parameter DATA9_MAP  = 96'h000_000_000_000_000_000_000_000,
    parameter DATA10_MAP = 96'h000_000_000_000_000_000_000_000,
@@ -374,7 +374,7 @@ module mig_mig #
    parameter DATA15_MAP = 96'h000_000_000_000_000_000_000_000,
    parameter DATA16_MAP = 96'h000_000_000_000_000_000_000_000,
    parameter DATA17_MAP = 96'h000_000_000_000_000_000_000_000,
-   parameter MASK0_MAP  = 108'h000_209_215_229_239_009_015_029_039,
+   parameter MASK0_MAP  = 108'h000_000_000_000_000_009_019_029_039,
    parameter MASK1_MAP  = 108'h000_000_000_000_000_000_000_000_000,
 
    parameter SLOT_0_CONFIG         = 8'b0000_0001,
@@ -461,7 +461,7 @@ module mig_mig #
    parameter nCK_PER_CLK           = 4,
    // # of memory CKs per fabric CLK
    
-   parameter DIFF_TERM_SYSCLK      = "TRUE",
+   parameter DIFF_TERM_SYSCLK      = "FALSE",
                                      // Differential Termination for System
                                      // clock input pins
       

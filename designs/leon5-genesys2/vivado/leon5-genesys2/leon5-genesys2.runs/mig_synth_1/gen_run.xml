@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="mig_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1675909684">
+<GenRun Id="mig_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1676026677">
   <File Type="VDS-TIMING-PB" Name="mig_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="mig_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="mig.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="mig_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="mig_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="mig_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="mig.vds"/>
   <File Type="REPORTS-TCL" Name="mig_reports.tcl"/>
   <File Type="PA-TCL" Name="mig.tcl"/>
+  <File Type="RDS-RDS" Name="mig.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="mig_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="mig_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mig_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mig">
     <File Path="$PSRCDIR/sources_1/ip/mig/mig.xci">
       <FileInfo>

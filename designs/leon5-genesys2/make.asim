@@ -413,4 +413,5 @@
 	acom -quiet   -93 -work work ahbrom.vhd
 	acom -quiet   -93 -work work leon5mp.vhd
 	acom -quiet   -93 -work work ddr_dummy.vhd
+	acom -quiet   -93 -work work ahb2axi_mig_7series.vhd
 	acom -quiet   -93 -work work testbench.vhd

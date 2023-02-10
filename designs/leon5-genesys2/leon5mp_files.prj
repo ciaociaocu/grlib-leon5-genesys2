@@ -364,3 +364,4 @@ vhdl work config.vhd
 vhdl work ahbrom.vhd
 vhdl work leon5mp.vhd
 vhdl work ddr_dummy.vhd
+vhdl work ahb2axi_mig_7series.vhd

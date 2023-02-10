@@ -366,6 +366,7 @@ add_input_file -format VHDL -work work config.vhd
 add_input_file -format VHDL -work work ahbrom.vhd
 add_input_file -format VHDL -work work leon5mp.vhd
 add_input_file -format VHDL -work work ddr_dummy.vhd
+add_input_file -format VHDL -work work ahb2axi_mig_7series.vhd
 setup_design -design leon5mp
 setup_design -retiming
 setup_design -vhdl

@@ -381,6 +381,7 @@ project.addFile('work','config.vhd')
 project.addFile('work','ahbrom.vhd')
 project.addFile('work','leon5mp.vhd')
 project.addFile('work','ddr_dummy.vhd')
+project.addFile('work','ahb2axi_mig_7series.vhd')
 
 # Set project options
 project.setOption('ManageUnconnectedOutputs', 'Ground')

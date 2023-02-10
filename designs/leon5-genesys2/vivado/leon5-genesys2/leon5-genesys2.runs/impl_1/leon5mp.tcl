@@ -60,9 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -79,7 +76,6 @@ set rc [catch {
   add_files -quiet /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/leon5mp.dcp
   read_ip -quiet /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/sources_1/ip/mig/mig.xci
   read_xdc /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc
-  read_xdc /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc
   link_design -top leon5mp -part xc7k325tffg900-2
   close_msg_db -file init_design.pb
 } RESULT]

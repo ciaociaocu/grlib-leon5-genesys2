@@ -14,21 +14,17 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7k325tffg900-2
 INFO: [Project 1-454] Reading design checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/sources_1/ip/mig/mig.dcp' for cell 'mig_gen.gen_mig.ddrc/MCB_inst'
-INFO: [Netlist 29-17] Analyzing 4464 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3689 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/sources_1/ip/mig/mig/user_design/constraints/mig.xdc] for cell 'mig_gen.gen_mig.ddrc/MCB_inst'
-WARNING: [Vivado 12-4777] Setting CLOCK_DEDICATED_ROUTE constraint on the PARENT net instead of the specified net segment (net name: mig_gen.gen_mig.ddrc/MCB_inst/sys_clk_p). Placer only honors CLOCK_DEDICATED_ROUTE when set on the PARENT net, e.g. net segment directly connected to the driver. To eliminate this message, please update your constraint to specify the PARENT net instead. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/sources_1/ip/mig/mig/user_design/constraints/mig.xdc:41]
 Finished Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/sources_1/ip/mig/mig/user_design/constraints/mig.xdc] for cell 'mig_gen.gen_mig.ddrc/MCB_inst'
 Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc]
 WARNING: [Constraints 18-619] A clock with name 'clk200p' already exists, overwriting the previous clock with the same name. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:7]
-CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal clk200p cannot be placed on AD12 (IOB_X1Y76) because the pad is already occupied by terminal ddr3_cs_n[0] possibly due to user constraint [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:21]
-CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal clk200p cannot be placed on AD12 (IOB_X1Y76) because the pad is already occupied by terminal ddr3_cs_n[0] possibly due to user constraint [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:22]
-CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal phy_int cannot be placed on AK16 (IOB_X1Y48) because the pad is already occupied by terminal ddr3_dm[4] possibly due to user constraint [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:85]
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:110]
 INFO: [Timing 38-2] Deriving generated clocks [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:110]
-get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2640.656 ; gain = 590.133 ; free physical = 4923 ; free virtual = 43929
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2598.129 ; gain = 600.070 ; free physical = 4735 ; free virtual = 46204
 CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-to [all_registers -clock [get_clocks clk125_nobuf_0]]'. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:114]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-to [all_registers -clock [get_clocks clk125_nobuf_90]]'. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:115]
@@ -36,27 +32,25 @@ Resolution: Check if the specified object(s) exists in the current design. If it
 CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-from [all_registers -clock [get_clocks clk125_nobuf_0]]'. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc:120]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 Finished Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc]
-Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc]
-Finished Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2689.656 ; gain = 0.000 ; free physical = 5010 ; free virtual = 44016
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2633.129 ; gain = 0.000 ; free physical = 4799 ; free virtual = 46268
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 539 instances were transformed.
+  A total of 310 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
-  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 8 instances
-  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 64 instances
-  LUT6_2 => LUT6_2 (LUT5, LUT6): 28 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 4 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 32 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 26 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 437 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 246 instances
 
-10 Infos, 2 Warnings, 6 Critical Warnings and 0 Errors encountered.
+10 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2689.656 ; gain = 1271.145 ; free physical = 5010 ; free virtual = 44016
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2633.129 ; gain = 1248.816 ; free physical = 4799 ; free virtual = 46268
 Command: opt_design -directive Explore
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
-INFO: [Common 17-86] Your Implementation license expires in 29 day(s)
+INFO: [Common 17-86] Your Implementation license expires in 28 day(s)
 INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
 Running DRC as a precondition to command opt_design
 
@@ -65,58 +59,58 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2761.691 ; gain = 64.031 ; free physical = 4994 ; free virtual = 44000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.92 . Memory (MB): peak = 2705.164 ; gain = 64.031 ; free physical = 4785 ; free virtual = 46254
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1062af47b
+Ending Cache Timing Information Task | Checksum: 141d974f4
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2761.691 ; gain = 0.000 ; free physical = 4891 ; free virtual = 43897
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2705.164 ; gain = 0.000 ; free physical = 4717 ; free virtual = 46186
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 50 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 15cef2140
+Phase 1 Retarget | Checksum: 7c63992c
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4874 ; free virtual = 43880
-INFO: [Opt 31-389] Phase Retarget created 74 cells and removed 351 cells
-INFO: [Opt 31-1021] In phase Retarget, 312 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4686 ; free virtual = 46155
+INFO: [Opt 31-389] Phase Retarget created 43 cells and removed 273 cells
+INFO: [Opt 31-1021] In phase Retarget, 244 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1669b5ea9
+Phase 2 Constant propagation | Checksum: 159526c88
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4874 ; free virtual = 43880
-INFO: [Opt 31-389] Phase Constant propagation created 14 cells and removed 52 cells
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4670 ; free virtual = 46139
+INFO: [Opt 31-389] Phase Constant propagation created 14 cells and removed 60 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 59 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 144d53bea
+Phase 3 Sweep | Checksum: dfb8f40f
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4843 ; free virtual = 43849
-INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 251 cells
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4637 ; free virtual = 46106
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 237 cells
 INFO: [Opt 31-1021] In phase Sweep, 5 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 1dc521956
+Phase 4 BUFG optimization | Checksum: 1b8e0cae4
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4842 ; free virtual = 43848
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4637 ; free virtual = 46106
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1dc521956
+Phase 5 Shift Register Optimization | Checksum: 1b8e0cae4
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4842 ; free virtual = 43848
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4637 ; free virtual = 46106
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 144d53bea
+Phase 6 Post Processing Netlist | Checksum: dfb8f40f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4842 ; free virtual = 43848
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4637 ; free virtual = 46106
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -125,9 +119,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              74  |             351  |                                            312  |
-|  Constant propagation         |              14  |              52  |                                             59  |
-|  Sweep                        |               2  |             251  |                                              5  |
+|  Retarget                     |              43  |             273  |                                            244  |
+|  Constant propagation         |              14  |              60  |                                             59  |
+|  Sweep                        |               2  |             237  |                                              5  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -137,17 +131,17 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4842 ; free virtual = 43848
-Ending Logic Optimization Task | Checksum: 1df76593d
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4637 ; free virtual = 46106
+Ending Logic Optimization Task | Checksum: 1071f8363
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2846.582 ; gain = 0.000 ; free physical = 4842 ; free virtual = 43848
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2780.086 ; gain = 0.000 ; free physical = 4637 ; free virtual = 46106
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.724 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.784 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -157,36 +151,36 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 63 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 1 newly gated: 0 Total Ports: 126
-Ending PowerOpt Patch Enables Task | Checksum: 1860e3fd1
+Ending PowerOpt Patch Enables Task | Checksum: 1526745f4
 
-Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.48 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4690 ; free virtual = 43696
-Ending Power Optimization Task | Checksum: 1860e3fd1
+Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.42 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4524 ; free virtual = 45998
+Ending Power Optimization Task | Checksum: 1526745f4
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:20 . Memory (MB): peak = 3588.723 ; gain = 742.141 ; free physical = 4760 ; free virtual = 43767
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:21 . Memory (MB): peak = 3490.797 ; gain = 710.711 ; free physical = 4581 ; free virtual = 46056
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 1860e3fd1
+Ending Final Cleanup Task | Checksum: 1526745f4
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4760 ; free virtual = 43767
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4581 ; free virtual = 46056
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4760 ; free virtual = 43767
-Ending Netlist Obfuscation Task | Checksum: 1b1742fdd
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4581 ; free virtual = 46056
+Ending Netlist Obfuscation Task | Checksum: 1aee36ab7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4760 ; free virtual = 43766
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4581 ; free virtual = 46056
 INFO: [Common 17-83] Releasing license: Implementation
-40 Infos, 2 Warnings, 6 Critical Warnings and 0 Errors encountered.
+40 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:01:06 ; elapsed = 00:00:32 . Memory (MB): peak = 3588.723 ; gain = 899.066 ; free physical = 4760 ; free virtual = 43766
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4760 ; free virtual = 43766
+opt_design: Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 3490.797 ; gain = 857.668 ; free physical = 4581 ; free virtual = 46056
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4581 ; free virtual = 46056
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4724 ; free virtual = 43761
+Write XDEF Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4560 ; free virtual = 46058
 INFO: [Common 17-1381] The checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3588.723 ; gain = 0.000 ; free physical = 4742 ; free virtual = 43764
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3490.797 ; gain = 0.000 ; free physical = 4575 ; free virtual = 46064
 INFO: [runtcl-4] Executing : report_drc -file leon5mp_drc_opted.rpt -pb leon5mp_drc_opted.pb -rpx leon5mp_drc_opted.rpx
 Command: report_drc -file leon5mp_drc_opted.rpt -pb leon5mp_drc_opted.pb -rpx leon5mp_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -196,21 +190,583 @@ report_drc completed successfully
 Command: place_design -directive Explore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
-INFO: [Common 17-86] Your Implementation license expires in 29 day(s)
+INFO: [Common 17-86] Your Implementation license expires in 28 day(s)
 INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 8 threads
-ERROR: [DRC BIVC-1] Bank IO standard Vcc: Conflicting Vcc voltages in bank 17. For example, the following two ports in this bank have conflicting VCCOs:  
-button[0] (LVCMOS12, requiring VCCO=1.200) and clk200p (LVDS_25, requiring VCCO=2.500)
-INFO: [Vivado_Tcl 4-198] DRC finished with 1 Errors
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
-INFO: [Common 17-83] Releasing license: Implementation
-56 Infos, 2 Warnings, 6 Critical Warnings and 2 Errors encountered.
-place_design failed
-ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Thu Feb  9 04:08:14 2023...
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4454 ; free virtual = 45966
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bca3258a
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4454 ; free virtual = 45966
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4454 ; free virtual = 45966
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b54d14b1
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4364 ; free virtual = 45877
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1d74f3851
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4144 ; free virtual = 45685
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1d74f3851
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4144 ; free virtual = 45685
+Phase 1 Placer Initialization | Checksum: 1d74f3851
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4144 ; free virtual = 45685
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1a56645e1
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4133 ; free virtual = 45668
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net l5sys/cpuloop[0].nocgcpu.core/cc0/srstregs.r_reg[holdn]_0. Replicated 15 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 15 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 15 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4118 ; free virtual = 45656
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4117 ; free virtual = 45655
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |           15  |              0  |                     1  |           0  |           1  |  00:00:01  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |           15  |              0  |                     1  |           0  |           5  |  00:00:02  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1be2ba3a8
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:49 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4109 ; free virtual = 45647
+Phase 2.2 Global Placement Core | Checksum: 17dd7432c
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:51 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4097 ; free virtual = 45635
+Phase 2 Global Placement | Checksum: 17dd7432c
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:51 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4144 ; free virtual = 45682
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1f62740ac
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:54 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4128 ; free virtual = 45667
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1929cc970
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:00:59 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4119 ; free virtual = 45658
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 16b7feba3
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:00 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4149 ; free virtual = 45684
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1374602a1
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:00 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4149 ; free virtual = 45684
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1537ea9e7
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:19 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4104 ; free virtual = 45640
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 18e897045
+
+Time (s): cpu = 00:02:42 ; elapsed = 00:01:22 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4107 ; free virtual = 45642
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 15b7300c1
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:22 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4106 ; free virtual = 45642
+Phase 3 Detail Placement | Checksum: 15b7300c1
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:22 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4106 ; free virtual = 45642
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 128761211
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-33] Processed net l5sys/dbgmod/p_0_in_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 128761211
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:29 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4153 ; free virtual = 45689
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.528. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1a7ea4249
+
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:32 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4151 ; free virtual = 45687
+Phase 4.1 Post Commit Optimization | Checksum: 1a7ea4249
+
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:32 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4151 ; free virtual = 45687
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1a7ea4249
+
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:33 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4158 ; free virtual = 45694
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1a7ea4249
+
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:33 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4162 ; free virtual = 45698
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4162 ; free virtual = 45698
+Phase 4.4 Final Placement Cleanup | Checksum: 1bc69fdf4
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:34 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4161 ; free virtual = 45697
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1bc69fdf4
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:34 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4161 ; free virtual = 45697
+Ending Placer Task | Checksum: 13d00c207
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:34 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4160 ; free virtual = 45696
+INFO: [Common 17-83] Releasing license: Implementation
+75 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:03:12 ; elapsed = 00:01:36 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4274 ; free virtual = 45811
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4274 ; free virtual = 45811
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4101 ; free virtual = 45784
+INFO: [Common 17-1381] The checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4240 ; free virtual = 45802
+INFO: [runtcl-4] Executing : report_io -file leon5mp_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4217 ; free virtual = 45779
+INFO: [runtcl-4] Executing : report_utilization -file leon5mp_utilization_placed.rpt -pb leon5mp_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file leon5mp_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.78 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4230 ; free virtual = 45793
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-86] Your Implementation license expires in 28 day(s)
+INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+87 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4194 ; free virtual = 45756
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4008 ; free virtual = 45717
+INFO: [Common 17-1381] The checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 4151 ; free virtual = 45740
+Command: route_design -directive Explore -tns_cleanup
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-86] Your Implementation license expires in 28 day(s)
+INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: d7133d4e ConstDB: 0 ShapeSum: 65ed84b9 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: f926e26d
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 3847 ; free virtual = 45436
+Post Restoration Checksum: NetGraph: 623ede6d NumContArr: 96e80400 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: f926e26d
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 3863 ; free virtual = 45453
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: f926e26d
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 3814 ; free virtual = 45404
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: f926e26d
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 3814 ; free virtual = 45403
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 199684ce7
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:29 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 3734 ; free virtual = 45332
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.575  | TNS=0.000  | WHS=-0.993 | THS=-2049.696|
+
+Phase 2 Router Initialization | Checksum: 16e0e478c
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:33 . Memory (MB): peak = 3562.832 ; gain = 0.000 ; free physical = 3719 ; free virtual = 45314
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.000610059 %
+  Global Horizontal Routing Utilization  = 0.000694766 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 73711
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 73709
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 2
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: f4a11b68
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:42 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3690 ; free virtual = 45284
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 24905
+ Number of Nodes with overlaps = 5105
+ Number of Nodes with overlaps = 1707
+ Number of Nodes with overlaps = 822
+ Number of Nodes with overlaps = 356
+ Number of Nodes with overlaps = 128
+ Number of Nodes with overlaps = 39
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.027 | TNS=-0.036 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 25d3825c7
+
+Time (s): cpu = 00:05:04 ; elapsed = 00:02:08 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3468 ; free virtual = 45313
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 2045
+ Number of Nodes with overlaps = 732
+ Number of Nodes with overlaps = 317
+ Number of Nodes with overlaps = 262
+ Number of Nodes with overlaps = 102
+ Number of Nodes with overlaps = 70
+ Number of Nodes with overlaps = 56
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.439  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1208d9430
+
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:04 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3420 ; free virtual = 45276
+Phase 4 Rip-up And Reroute | Checksum: 1208d9430
+
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:05 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3421 ; free virtual = 45276
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 TNS Cleanup
+
+Phase 5.1.1 Delay CleanUp
+Phase 5.1.1 Delay CleanUp | Checksum: 1208d9430
+
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:05 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3420 ; free virtual = 45275
+Phase 5.1 TNS Cleanup | Checksum: 1208d9430
+
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:05 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3420 ; free virtual = 45275
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1208d9430
+
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:05 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3420 ; free virtual = 45275
+Phase 5 Delay and Skew Optimization | Checksum: 1208d9430
+
+Time (s): cpu = 00:06:31 ; elapsed = 00:03:05 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3420 ; free virtual = 45275
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 86ee99bb
+
+Time (s): cpu = 00:06:38 ; elapsed = 00:03:08 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3418 ; free virtual = 45273
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.439  | TNS=0.000  | WHS=-1.322 | THS=-7.099 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1419a8025
+
+Time (s): cpu = 00:06:39 ; elapsed = 00:03:08 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3415 ; free virtual = 45270
+Phase 6 Post Hold Fix | Checksum: 140354eb4
+
+Time (s): cpu = 00:06:39 ; elapsed = 00:03:08 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3415 ; free virtual = 45270
+
+Phase 7 Timing Verification
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 17403ce96
+
+Time (s): cpu = 00:06:48 ; elapsed = 00:03:10 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3423 ; free virtual = 45277
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.439  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 7 Timing Verification | Checksum: 17403ce96
+
+Time (s): cpu = 00:06:49 ; elapsed = 00:03:11 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3423 ; free virtual = 45277
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 7.73762 %
+  Global Horizontal Routing Utilization  = 10.4906 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 17403ce96
+
+Time (s): cpu = 00:06:49 ; elapsed = 00:03:11 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3423 ; free virtual = 45276
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 17403ce96
+
+Time (s): cpu = 00:06:49 ; elapsed = 00:03:11 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3424 ; free virtual = 45277
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 11e9ee9ce
+
+Time (s): cpu = 00:06:54 ; elapsed = 00:03:16 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3424 ; free virtual = 45277
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.440  | TNS=0.000  | WHS=-1.319 | THS=-6.537 |
+
+WARNING: [Route 35-39] The design did not meet timing requirements. Please run report_timing_summary for detailed reports.
+Resolution: Verify that the timing was met or had small violations at all previous steps (synthesis, placement, power_opt, and phys_opt). Run report_timing_summary and analyze individual timing paths.
+INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS.
+Phase 11 Post Router Timing | Checksum: b43b93c7
+
+Time (s): cpu = 00:07:20 ; elapsed = 00:03:21 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3380 ; free virtual = 45233
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:07:21 ; elapsed = 00:03:22 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3625 ; free virtual = 45478
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+106 Infos, 2 Warnings, 3 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:07:26 ; elapsed = 00:03:24 . Memory (MB): peak = 3646.176 ; gain = 83.344 ; free physical = 3625 ; free virtual = 45478
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3646.176 ; gain = 0.000 ; free physical = 3625 ; free virtual = 45478
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 3646.176 ; gain = 0.000 ; free physical = 3410 ; free virtual = 45440
+INFO: [Common 17-1381] The checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 3646.176 ; gain = 0.000 ; free physical = 3595 ; free virtual = 45480
+INFO: [runtcl-4] Executing : report_drc -file leon5mp_drc_routed.rpt -pb leon5mp_drc_routed.pb -rpx leon5mp_drc_routed.rpx
+Command: report_drc -file leon5mp_drc_routed.rpt -pb leon5mp_drc_routed.pb -rpx leon5mp_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3678.191 ; gain = 32.016 ; free physical = 3573 ; free virtual = 45457
+INFO: [runtcl-4] Executing : report_methodology -file leon5mp_methodology_drc_routed.rpt -pb leon5mp_methodology_drc_routed.pb -rpx leon5mp_methodology_drc_routed.rpx
+Command: report_methodology -file leon5mp_methodology_drc_routed.rpt -pb leon5mp_methodology_drc_routed.pb -rpx leon5mp_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:44 ; elapsed = 00:00:12 . Memory (MB): peak = 3678.191 ; gain = 0.000 ; free physical = 3620 ; free virtual = 45506
+INFO: [runtcl-4] Executing : report_power -file leon5mp_power_routed.rpt -pb leon5mp_power_summary_routed.pb -rpx leon5mp_power_routed.rpx
+Command: report_power -file leon5mp_power_routed.rpt -pb leon5mp_power_summary_routed.pb -rpx leon5mp_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+118 Infos, 3 Warnings, 3 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:40 ; elapsed = 00:00:21 . Memory (MB): peak = 3678.191 ; gain = 0.000 ; free physical = 3569 ; free virtual = 45465
+INFO: [runtcl-4] Executing : report_route_status -file leon5mp_route_status.rpt -pb leon5mp_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file leon5mp_timing_summary_routed.rpt -pb leon5mp_timing_summary_routed.pb -rpx leon5mp_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.delay_rgmii_rx_ctl0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[0].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[1].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[2].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[3].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file leon5mp_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file leon5mp_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file leon5mp_bus_skew_routed.rpt -pb leon5mp_bus_skew_routed.pb -rpx leon5mp_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-86] Your Implementation license expires in 28 day(s)
+INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+136 Infos, 3 Warnings, 8 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3678.191 ; gain = 0.000 ; free physical = 3532 ; free virtual = 45434
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3678.191 ; gain = 0.000 ; free physical = 3310 ; free virtual = 45388
+INFO: [Common 17-1381] The checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/leon5mp_postroute_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 3678.191 ; gain = 0.000 ; free physical = 3496 ; free virtual = 45431
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file leon5mp_timing_summary_postroute_physopted.rpt -pb leon5mp_timing_summary_postroute_physopted.pb -rpx leon5mp_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.delay_rgmii_rx_ctl0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[0].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[1].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[2].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-469] The REFCLK pin of IDELAYCTRL eth0.dlyctrl0 has a clock period of 4.000 ns (frequency 250.000 Mhz) but IDELAYE2 eth0.rgmii_rxd[3].delay_rgmii_rxd0 has REFCLK_FREQUENCY of 200.000 Mhz (period 5.000 ns). The IDELAYCTRL REFCLK pin frequency must match the IDELAYE2 REFCLK_FREQUENCY property.
+Resolution: Check that the IDELAYCTRL REFCLK pin is receiving a clock and that the period of the clock matches the REFCLK_FREQUENCY property of the <IDELAYE2/ODELAYE2>.
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file leon5mp_bus_skew_postroute_physopted.rpt -pb leon5mp_bus_skew_postroute_physopted.pb -rpx leon5mp_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: write_bitstream -force leon5mp.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-86] Your Implementation license expires in 28 day(s)
+INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HP.gen_dqs_iobuf[0].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HP.gen_dqs_iobuf[1].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HP.gen_dqs_iobuf[2].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HP.gen_dqs_iobuf[3].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/ input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm//A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/ input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm//B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0 input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0 input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1] input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1] input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]__0 input l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/p_0_out input l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/p_0_out input l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/p_0_out/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/srstregs.r_reg[mulo] input l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/srstregs.r_reg[mulo]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/ output l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm//P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0 output l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/ multiplier stage l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm//P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0 multiplier stage l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1] multiplier stage l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]__0 multiplier stage l5sys/cpuloop[0].nocgcpu.core/mul0/xm3232.m3232/pipe2.arch0.dwm/w2.p_i_reg[1]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/srstregs.r_reg[mulo] multiplier stage l5sys/cpuloop[0].nocgcpu.core/nfpugen.nfpu0/srstregs.r_reg[mulo]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDRC-153] Gated clock check: Net eth0.rgmii0/no10support.clkmux25o/clk10_100o is a gated clock net sourced by a combinational pin eth0.rgmii0/no10support.clkmux25o/V7.U0_i_1/O, cell eth0.rgmii0/no10support.clkmux25o/V7.U0_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC REQP-1709] Clock output buffering: PLLE2_ADV connectivity violation. The signal mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/pll_clk3_out on the mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 24 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./leon5mp.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Feb 10 12:20:42 2023. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+156 Infos, 27 Warnings, 14 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:43 ; elapsed = 00:00:25 . Memory (MB): peak = 3926.727 ; gain = 248.535 ; free physical = 3446 ; free virtual = 45406
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 10 12:20:42 2023...

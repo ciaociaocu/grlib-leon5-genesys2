@@ -13,13 +13,13 @@ Command: synth_design -top leon5mp -part xc7k325tffg900-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-86] Your Synthesis license expires in 29 day(s)
+INFO: [Common 17-86] Your Synthesis license expires in 28 day(s)
 INFO: [Common 17-1686] The version limit for your license is '2023.02' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
 INFO: [Device 21-403] Loading part xc7k325tffg900-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23587 
+INFO: Helper process launched with PID 21659 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1794.832 ; gain = 151.688 ; free physical = 5238 ; free virtual = 44495
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1794.867 ; gain = 150.719 ; free physical = 3280 ; free virtual = 46813
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'leon5mp' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/leon5mp.vhd:117]
 	Parameter fabtech bound to: 49 - type: integer 
@@ -2108,13 +2108,7 @@ INFO: [Synth 8-638] synthesizing module 'trstmux' [/home/zhichao/Downloads/GRLIB
 	Parameter scantest bound to: 0 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'trstmux' (52#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/grlib/dftlib/trstmux.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'ahbjtag' (53#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/ahbjtag.vhd:80]
-	Parameter hindex bound to: 1 - type: integer 
-	Parameter haddr bound to: 1024 - type: integer 
-	Parameter hmask bound to: 3072 - type: integer 
-	Parameter pindex bound to: 2 - type: integer 
-	Parameter paddr bound to: 4 - type: integer 
-	Parameter pmask bound to: 4095 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'ahb2axi_mig_7series' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'ahb2axi_mig_7series' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:84]
 	Parameter hindex bound to: 1 - type: integer 
 	Parameter haddr bound to: 1024 - type: integer 
 	Parameter hmask bound to: 3072 - type: integer 
@@ -2243,19 +2237,19 @@ INFO: [Synth 8-226] default block is never used [/home/zhichao/Downloads/GRLIB/g
 INFO: [Synth 8-226] default block is never used [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/axi.vhd:573]
 INFO: [Synth 8-256] done synthesizing module 'ahb2axib' (55#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/ahb2axib.vhd:78]
 INFO: [Synth 8-256] done synthesizing module 'ahb2axi4b' (56#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/ahb2axi4b.vhd:78]
-INFO: [Synth 8-6157] synthesizing module 'mig' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/.Xil/Vivado-23557-coding/realtime/mig_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mig' (57#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/.Xil/Vivado-23557-coding/realtime/mig_stub.v:5]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[hmaster] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[hmastlock] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[hmbsel] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[hirq] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[testen] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[testrst] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[scanen] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[testoen] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[testin] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-WARNING: [Synth 8-3848] Net ahbsi_bridge[endian] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:93]
-INFO: [Synth 8-256] done synthesizing module 'ahb2axi_mig_7series' (58#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd:84]
+INFO: [Synth 8-6157] synthesizing module 'mig' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/.Xil/Vivado-21610-coding/realtime/mig_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mig' (57#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/.Xil/Vivado-21610-coding/realtime/mig_stub.v:5]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[hmaster] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[hmastlock] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[hmbsel] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[hirq] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[testen] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[testrst] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[scanen] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[testoen] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[testin] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+WARNING: [Synth 8-3848] Net ahbsi_bridge[endian] in module/entity ahb2axi_mig_7series does not have driver. [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'ahb2axi_mig_7series' (58#1) [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd:84]
 	Parameter tech bound to: 49 - type: integer 
 	Parameter clk_mul bound to: 16 - type: integer 
 	Parameter clk_div bound to: 8 - type: integer 
@@ -3280,7 +3274,7 @@ WARNING: [Synth 8-3331] design ahb2axib has unconnected port ahbsi[testoen]
 WARNING: [Synth 8-3331] design ahb2axib has unconnected port ahbsi[testin][3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2670.277 ; gain = 1027.133 ; free physical = 4626 ; free virtual = 43896
+Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2669.281 ; gain = 1025.133 ; free physical = 2557 ; free virtual = 46107
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3293,10 +3287,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2682.152 ; gain = 1039.008 ; free physical = 4804 ; free virtual = 44074
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2681.156 ; gain = 1037.008 ; free physical = 2734 ; free virtual = 46284
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2682.152 ; gain = 1039.008 ; free physical = 4804 ; free virtual = 44074
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2681.156 ; gain = 1037.008 ; free physical = 2734 ; free virtual = 46284
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3354,20 +3348,18 @@ Finished Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/gr
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/leon5mp_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/leon5mp_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/leon5mp_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc]
-Finished Parsing XDC File [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2946.777 ; gain = 0.000 ; free physical = 4312 ; free virtual = 43610
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2946.812 ; gain = 0.000 ; free physical = 2260 ; free virtual = 45811
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
   IODELAYE1 => IDELAYE2: 5 instances
   RAMB16_S36_S36 => RAMB36E1: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2946.777 ; gain = 0.000 ; free physical = 4312 ; free virtual = 43610
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2946.812 ; gain = 0.000 ; free physical = 2260 ; free virtual = 45811
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:00:46 . Memory (MB): peak = 2946.777 ; gain = 1303.633 ; free physical = 4733 ; free virtual = 44031
+Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:00:47 . Memory (MB): peak = 2946.812 ; gain = 1302.664 ; free physical = 2686 ; free virtual = 46237
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-802] inferred FSM for state register 'syncrregs.r_reg[d][iudiags]' in module 'iu5'
@@ -3735,7 +3727,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r_reg[mdio_state]' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'syncregs.r_reg[state]' using encoding 'sequential' in module 'ahb2axib'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:49 ; elapsed = 00:01:57 . Memory (MB): peak = 2946.777 ; gain = 1303.633 ; free physical = 2192 ; free virtual = 41508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:51 ; elapsed = 00:01:59 . Memory (MB): peak = 2946.812 ; gain = 1302.664 ; free physical = 268 ; free virtual = 43708
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'eth0.rgmii0/syncreg_status[10].syncreg3' (syncreg) to 'eth0.rgmii0/syncreg_status[11].syncreg3'
 INFO: [Synth 8-223] decloning instance 'eth0.rgmii0/syncreg_status[10].syncreg3' (syncreg) to 'eth0.rgmii0/syncreg_status[12].syncreg3'
@@ -3765,7 +3757,7 @@ Report RTL Partitions:
 |16    |cpucore5__GC0  |           1|     14662|
 |17    |leon5sys__GCB0 |           1|     40487|
 |18    |leon5sys__GCB1 |           1|     10994|
-|19    |leon5mp__GC0   |           1|     27152|
+|19    |leon5mp__GC0   |           1|     27149|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -5793,6 +5785,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrreg
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrregs.r_reg[m][ctrl][pc][29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrregs.r_reg[m][ctrl][pc][30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrregs.r_reg[m][ctrl][pc][31] )
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][22]' (FDRE) to 'syncrregs.r_reg[d][btb_diag_in][addr][31]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][23]' (FDRE) to 'syncrregs.r_reg[d][btb_diag_in][addr][31]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][24]' (FDRE) to 'syncrregs.r_reg[d][btb_diag_in][addr][31]'
@@ -5802,6 +5795,8 @@ INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][27]
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][28]' (FDRE) to 'syncrregs.r_reg[d][btb_diag_in][addr][31]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][29]' (FDRE) to 'syncrregs.r_reg[d][btb_diag_in][addr][31]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[d][btb_diag_in][addr][30]' (FDRE) to 'syncrregs.r_reg[d][btb_diag_in][addr][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrregs.r_reg[d][btb_diag_in][addr][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrregs.r_reg[perf][5] )
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][12]' (FDRE) to 'syncrregs.r_reg[perf][13]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][13]' (FDRE) to 'syncrregs.r_reg[perf][14]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][14]' (FDRE) to 'syncrregs.r_reg[perf][15]'
@@ -5853,6 +5848,7 @@ INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][59]' (FDRE) to 'syn
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][60]' (FDRE) to 'syncrregs.r_reg[perf][61]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][61]' (FDRE) to 'syncrregs.r_reg[perf][62]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[perf][62]' (FDRE) to 'syncrregs.r_reg[perf][63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\syncrregs.r_reg[perf][63] )
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[a][ctrl][tt][0][4]' (FDRE) to 'syncrregs.r_reg[a][ctrl][tt][0][0]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[a][ctrl][tt][0][5]' (FDRE) to 'syncrregs.r_reg[a][ctrl][tt][0][0]'
 INFO: [Synth 8-3886] merging instance 'syncrregs.r_reg[a][ctrl][tt][0][0]' (FDRE) to 'syncrregs.r_reg[a][ctrl][tt][0][1]'
@@ -5913,7 +5909,7 @@ INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instan
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[tcmdata][31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[mmfsr][ebe][7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[ahb_hsize][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\srstregs.r_reg[ahb_hprot][3] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "v[fpc_mosi][addr]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "v[c2c_mosi][addr]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "v[iudiag_mosi][addr]" won't be mapped to RAM because it is too sparse
@@ -5944,13 +5940,6 @@ WARNING: [Synth 8-3917] design cctrl5__GB3 has port perf[8] driven by constant 0
 WARNING: [Synth 8-3917] design cctrl5__GB3 has port perf[7] driven by constant 0
 WARNING: [Synth 8-3917] design cctrl5__GB3 has port perf[6] driven by constant 0
 WARNING: [Synth 8-3917] design cctrl5__GB3 has port perf[5] driven by constant 0
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[mmuerr][ow] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[itcmctx][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[itcmenp] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[ahb_hburst][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[d2tcmhit] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[i2tcmhit] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\srstregs.r_reg[d1tcmen] )
 INFO: [Synth 8-4471] merging register 'srstregs.r_reg[muli2][15:0]' into 'srstregs.r_reg[muli2][15:0]' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/nanofpu.vhd:1811]
 INFO: [Synth 8-4471] merging register 'srstregs.r_reg[mulo][31:0]' into 'srstregs.r_reg[mulo][31:0]' [/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/nanofpu.vhd:1811]
 INFO: [Synth 8-5546] ROM "v[nalimsp]" won't be mapped to RAM because it is too sparse
@@ -6054,6 +6043,12 @@ WARNING: [Synth 8-3917] design cpucore5__GC0 has port cramo[itcmdout][39] driven
 WARNING: [Synth 8-3917] design cpucore5__GC0 has port cramo[itcmdout][38] driven by constant 0
 INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cmem1/dtagconf0.dtagloop[3].dtagcmem/rwcol0/r1_reg[wren] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cmem1/dtagconf0.dtagloop[2].dtagcmem/rwcol0/r1_reg[wren] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cmem1/dtagconf0.dtagloop[1].dtagcmem/rwcol0/r1_reg[wren] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cmem1/dtagconf0.dtagloop[0].dtagcmem/rwcol0/r1_reg[wren] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mul0/syncrregs.rm_reg[state][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mul0/syncrregs.rm_reg[ready] )
 INFO: [Synth 8-5544] ROM "p_3_out0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (dbgmod/\srstregs.r_reg[tr][s1hmaster][3] )
@@ -6064,17 +6059,15 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (dbgmod/\s
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (dbgmod/\srstregs.r_reg[sess][0][dbuf][161] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (dbgmod/\srstregs.r_reg[sess][0][dbuf][129] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (dbgmod/\srstregs.r_reg[sess][0][dbuf][97] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (dbgmod/\srstregs.r_reg[sess][0][dbuf][65] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "len" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:56 ; elapsed = 00:03:04 . Memory (MB): peak = 2946.777 ; gain = 1303.633 ; free physical = 1670 ; free virtual = 41118
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:59 ; elapsed = 00:03:08 . Memory (MB): peak = 2946.812 ; gain = 1302.664 ; free physical = 681 ; free virtual = 43341
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -6290,7 +6283,7 @@ Report RTL Partitions:
 |16    |cpucore5__GC0  |           1|      7981|
 |17    |leon5sys__GCB0 |           1|     15230|
 |18    |leon5sys__GCB1 |           1|      5623|
-|19    |leon5mp__GC0   |           1|     12724|
+|19    |leon5mp__GC0   |           1|     12721|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -6299,7 +6292,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'mig_gen.gen_mig.ddrc/MCB_
 WARNING: [Synth 8-565] redefining clock 'clk200p'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:01 ; elapsed = 00:03:10 . Memory (MB): peak = 2946.777 ; gain = 1303.633 ; free physical = 1497 ; free virtual = 41025
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:05 ; elapsed = 00:03:14 . Memory (MB): peak = 2946.812 ; gain = 1302.664 ; free physical = 518 ; free virtual = 43258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -6307,7 +6300,7 @@ Start Timing Optimization
 info: optimization accepted worst group hill climbing move (-5350.0/oG. 78.0ps)
 info: optimization accepted worst group hill climbing move (-5345.0/oG.CP 155.0ps)
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:38 ; elapsed = 00:06:53 . Memory (MB): peak = 3026.762 ; gain = 1383.617 ; free physical = 1255 ; free virtual = 40847
+Finished Timing Optimization : Time (s): cpu = 00:06:55 ; elapsed = 00:07:10 . Memory (MB): peak = 3047.797 ; gain = 1403.648 ; free physical = 506 ; free virtual = 43020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -6402,11 +6395,11 @@ Report RTL Partitions:
 |9     |cpucore5__GC0  |           1|      7969|
 |10    |leon5sys__GCB0 |           1|      8763|
 |11    |leon5sys__GCB1 |           1|      4138|
-|12    |leon5mp__GC0   |           1|     12366|
-|13    |leon5mp_GT2    |           1|      9261|
-|14    |leon5mp_GT0    |           1|     30074|
-|15    |leon5mp_GT1    |           1|     51083|
-|16    |leon5mp_GT2__2 |           1|      4236|
+|12    |leon5mp__GC0   |           1|     12363|
+|13    |leon5mp_GT2    |           1|      9265|
+|14    |leon5mp_GT0    |           1|     30068|
+|15    |leon5mp_GT1    |           1|     51174|
+|16    |leon5mp_GT2__2 |           1|      4239|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -6415,7 +6408,7 @@ INFO: [Synth 8-6837] The timing for the instance cpuloop[0].nocgcpu.corei_16/cme
 INFO: [Synth 8-6837] The timing for the instance cpuloop[0].nocgcpu.corei_16/cmem1/itagloop[0].itagmem/xk7.xk7_s/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:58 ; elapsed = 00:07:16 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 747 ; free virtual = 39931
+Finished Technology Mapping : Time (s): cpu = 00:07:15 ; elapsed = 00:07:33 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 761 ; free virtual = 42193
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6433,11 +6426,11 @@ Report RTL Partitions:
 |9     |cpucore5__GC0  |           1|      3449|
 |10    |leon5sys__GCB0 |           1|      4314|
 |11    |leon5sys__GCB1 |           1|      1777|
-|12    |leon5mp__GC0   |           1|      5813|
-|13    |leon5mp_GT2    |           1|      4255|
-|14    |leon5mp_GT0    |           1|      4708|
-|15    |leon5mp_GT1    |           1|     16939|
-|16    |leon5mp_GT2__2 |           1|      4276|
+|12    |leon5mp__GC0   |           1|      5810|
+|13    |leon5mp_GT2    |           1|      4243|
+|14    |leon5mp_GT0    |           1|      4702|
+|15    |leon5mp_GT1    |           1|     16962|
+|16    |leon5mp_GT2__2 |           1|      4290|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -6457,7 +6450,7 @@ INFO: [Synth 8-5365] Flop eth0.e1/m100.u0/ethc0/rx_rmii0.rx0/rx_rst/rstout_reg i
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:06 ; elapsed = 00:07:25 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 625 ; free virtual = 39933
+Finished IO Insertion : Time (s): cpu = 00:07:23 ; elapsed = 00:07:42 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 714 ; free virtual = 42204
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -6470,7 +6463,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:07 ; elapsed = 00:07:25 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 626 ; free virtual = 39933
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:24 ; elapsed = 00:07:42 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 714 ; free virtual = 42205
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6482,25 +6475,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:13 ; elapsed = 00:07:31 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 634 ; free virtual = 39942
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:30 ; elapsed = 00:07:49 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 708 ; free virtual = 42200
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:07:13 ; elapsed = 00:07:32 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 634 ; free virtual = 39942
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:30 ; elapsed = 00:07:49 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 708 ; free virtual = 42200
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:07:15 ; elapsed = 00:07:34 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 637 ; free virtual = 39945
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:32 ; elapsed = 00:07:51 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 708 ; free virtual = 42200
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:07:15 ; elapsed = 00:07:34 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 637 ; free virtual = 39945
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:32 ; elapsed = 00:07:51 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 708 ; free virtual = 42200
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -6542,14 +6535,14 @@ Report Cell Usage:
 |9     |IDDR           |     5|
 |10    |IDELAYCTRL     |     1|
 |11    |IODELAYE1      |     5|
-|12    |LUT1           |   482|
-|13    |LUT2           |  2477|
-|14    |LUT3           |  5105|
-|15    |LUT4           |  4358|
-|16    |LUT5           |  9760|
-|17    |LUT6           | 26472|
-|18    |MUXF7          |  1899|
-|19    |MUXF8          |   457|
+|12    |LUT1           |   490|
+|13    |LUT2           |  2492|
+|14    |LUT3           |  5098|
+|15    |LUT4           |  4349|
+|16    |LUT5           |  9751|
+|17    |LUT6           | 26507|
+|18    |MUXF7          |  1891|
+|19    |MUXF8          |   456|
 |20    |ODDR           |     6|
 |21    |PLLE2_ADV      |     1|
 |22    |PLLE2_ADV_1    |     1|
@@ -6562,7 +6555,7 @@ Report Cell Usage:
 |29    |SRL16E         |     7|
 |30    |FDCE           |    62|
 |31    |FDPE           |     4|
-|32    |FDRE           | 19478|
+|32    |FDRE           | 19479|
 |33    |FDSE           |   238|
 |34    |IBUF           |    11|
 |35    |IOBUF          |     1|
@@ -6574,7 +6567,7 @@ Report Instance Areas:
 +------+-----------------------------------------+---------------------------------------+------+
 |      |Instance                                 |Module                                 |Cells |
 +------+-----------------------------------------+---------------------------------------+------+
-|1     |top                                      |                                       | 71759|
+|1     |top                                      |                                       | 71781|
 |2     |  \ahbjtaggen0.ahbjtag0                  |ahbjtag                                |   310|
 |3     |    ahbmst0                              |ahbmst__parameterized1                 |     5|
 |4     |    \gtckbuf.tckbuf                      |techbuf                                |     1|
@@ -6694,29 +6687,29 @@ Report Instance Areas:
 |118   |      \sync0.syncreg.syncregs[1].dff     |grdff                                  |     1|
 |119   |      \sync0.syncreg.syncregs[2].dff     |grdff_127                              |     1|
 |120   |  \eth0.rst1                             |rstgen                                 |    15|
-|121   |  l5sys                                  |leon5sys                               | 66074|
+|121   |  l5sys                                  |leon5sys                               | 66099|
 |122   |    ac0                                  |ahbctrl                                |   454|
 |123   |    ap0                                  |apbctrl                                |   708|
 |124   |      apbx                               |apbctrlx                               |   706|
-|125   |    \cpuloop[0].nocgcpu.core             |cpucore5                               | 59639|
-|126   |      cc0                                |cctrl5                                 | 21904|
-|127   |      cmem1                              |cachemem5                              |   651|
+|125   |    \cpuloop[0].nocgcpu.core             |cpucore5                               | 59657|
+|126   |      cc0                                |cctrl5                                 | 21891|
+|127   |      cmem1                              |cachemem5                              |   603|
 |128   |        \ddnobw.ddataloop[0].ddatamemh   |syncram__parameterized2                |     1|
 |129   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_111    |     1|
 |130   |        \ddnobw.ddataloop[0].ddatameml   |syncram__parameterized2_61             |     1|
 |131   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_110    |     1|
-|132   |        \ddnobw.ddataloop[1].ddatamemh   |syncram__parameterized2_62             |     5|
-|133   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_109    |     5|
-|134   |        \ddnobw.ddataloop[1].ddatameml   |syncram__parameterized2_63             |    48|
-|135   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_108    |    48|
+|132   |        \ddnobw.ddataloop[1].ddatamemh   |syncram__parameterized2_62             |     4|
+|133   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_109    |     4|
+|134   |        \ddnobw.ddataloop[1].ddatameml   |syncram__parameterized2_63             |    53|
+|135   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_108    |    53|
 |136   |        \ddnobw.ddataloop[2].ddatamemh   |syncram__parameterized2_64             |    11|
 |137   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_107    |    11|
-|138   |        \ddnobw.ddataloop[2].ddatameml   |syncram__parameterized2_65             |    44|
-|139   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_106    |    44|
-|140   |        \ddnobw.ddataloop[3].ddatamemh   |syncram__parameterized2_66             |    15|
-|141   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_105    |    15|
-|142   |        \ddnobw.ddataloop[3].ddatameml   |syncram__parameterized2_67             |    96|
-|143   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_104    |    96|
+|138   |        \ddnobw.ddataloop[2].ddatameml   |syncram__parameterized2_65             |    48|
+|139   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_106    |    48|
+|140   |        \ddnobw.ddataloop[3].ddatamemh   |syncram__parameterized2_66             |     2|
+|141   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_105    |     2|
+|142   |        \ddnobw.ddataloop[3].ddatameml   |syncram__parameterized2_67             |    53|
+|143   |          \xk7.xk7_s                     |kintex7_syncram__parameterized1_104    |    53|
 |144   |        \dtagconf0.dtagloop[0].dtagcmem  |syncram_2p__parameterized3             |    80|
 |145   |          rwcol0                         |memrwcol__parameterized3_102           |    79|
 |146   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p__parameterized2_103 |     1|
@@ -6762,24 +6755,24 @@ Report Instance Areas:
 |186   |        \itagloop[3].itagmem             |syncram_84                             |     2|
 |187   |          \xk7.xk7_s                     |kintex7_syncram                        |     2|
 |188   |      div0                               |div32                                  |   338|
-|189   |      iu0                                |iu5                                    | 26355|
-|190   |        bht0                             |bht_pap                                |  4793|
-|191   |          phtable                        |syncram_2p                             |   251|
-|192   |            \xk7_2p.xk7_2p               |kintex7_syncram_2p_60                  |   251|
-|193   |        btb0                             |btb                                    |  3418|
+|189   |      iu0                                |iu5                                    | 26424|
+|190   |        bht0                             |bht_pap                                |  4796|
+|191   |          phtable                        |syncram_2p                             |   250|
+|192   |            \xk7_2p.xk7_2p               |kintex7_syncram_2p_60                  |   250|
+|193   |        btb0                             |btb                                    |  3444|
 |194   |      mul0                               |mul32                                  |   136|
 |195   |        \xm3232.m3232                    |techmult                               |   136|
 |196   |          \pipe2.arch0.dwm               |gen_mult_pipe                          |   135|
-|197   |      \nfpugen.nfpu0                     |nanofpu                                |  8631|
-|198   |      \ramrf.iurf0                       |regfile5_ram                           |  1624|
+|197   |      \nfpugen.nfpu0                     |nanofpu                                |  8642|
+|198   |      \ramrf.iurf0                       |regfile5_ram                           |  1623|
 |199   |        x00                              |syncram_2p__parameterized1             |     1|
 |200   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_59                  |     1|
 |201   |        x01                              |syncram_2p__parameterized1_30          |    35|
 |202   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_58                  |    35|
 |203   |        x02                              |syncram_2p__parameterized1_31          |     1|
 |204   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_57                  |     1|
-|205   |        x03                              |syncram_2p__parameterized1_32          |    56|
-|206   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_56                  |    56|
+|205   |        x03                              |syncram_2p__parameterized1_32          |    55|
+|206   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_56                  |    55|
 |207   |        x10                              |syncram_2p__parameterized1_33          |     1|
 |208   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_55                  |     1|
 |209   |        x11                              |syncram_2p__parameterized1_34          |    84|
@@ -6804,7 +6797,7 @@ Report Instance Areas:
 |228   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p_45                  |     1|
 |229   |        x33                              |syncram_2p__parameterized1_44          |    65|
 |230   |          \xk7_2p.xk7_2p                 |kintex7_syncram_2p                     |    65|
-|231   |    dbgmod                               |dbgmod5                                |  4151|
+|231   |    dbgmod                               |dbgmod5                                |  4158|
 |232   |      \itb0.mcpu[0].itmem0               |itbufmem5                              |   166|
 |233   |        \meml0[0].ram0                   |syncram__parameterized8                |    34|
 |234   |          \xk7.xk7_s                     |kintex7_syncram__parameterized7_29     |    34|
@@ -6836,7 +6829,7 @@ Report Instance Areas:
 |260   |    \xcv.x0                              |unisim_outpad                          |     1|
 |261   |  \mig_gen.gen_mig.clkgenmigref0         |clkgen                                 |     4|
 |262   |    \xc7l.v                              |clkgen_virtex7                         |     4|
-|263   |  \mig_gen.gen_mig.ddrc                  |ahb2axi_mig_7series                    |  1207|
+|263   |  \mig_gen.gen_mig.ddrc                  |ahb2axi_mig_7series                    |  1204|
 |264   |    bridge                               |ahb2axi4b                              |  1071|
 |265   |      ahb2axibx                          |ahb2axib                               |  1046|
 |266   |        wbuffer                          |syncram_2p__parameterized5             |   207|
@@ -6849,17 +6842,17 @@ Report Instance Areas:
 |273   |    \xcv.x0                              |unisim_inpad                           |     1|
 +------+-----------------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:15 ; elapsed = 00:07:34 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 637 ; free virtual = 39945
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:32 ; elapsed = 00:07:51 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 708 ; free virtual = 42200
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 541 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:07:02 ; elapsed = 00:07:28 . Memory (MB): peak = 3038.688 ; gain = 1130.918 ; free physical = 4574 ; free virtual = 43882
-Synthesis Optimization Complete : Time (s): cpu = 00:07:15 ; elapsed = 00:07:39 . Memory (MB): peak = 3038.688 ; gain = 1395.543 ; free physical = 4590 ; free virtual = 43880
+Synthesis finished with 0 errors, 0 critical warnings and 641 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:19 ; elapsed = 00:07:44 . Memory (MB): peak = 3059.723 ; gain = 1149.918 ; free physical = 4632 ; free virtual = 46125
+Synthesis Optimization Complete : Time (s): cpu = 00:07:33 ; elapsed = 00:07:55 . Memory (MB): peak = 3059.723 ; gain = 1415.574 ; free physical = 4651 ; free virtual = 46127
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3141 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3132 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3082.789 ; gain = 0.000 ; free physical = 4544 ; free virtual = 43834
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3103.824 ; gain = 0.000 ; free physical = 4609 ; free virtual = 46085
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 25 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
@@ -6868,13 +6861,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB16_S36_S36 => RAMB36E1: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-911 Infos, 475 Warnings, 0 Critical Warnings and 0 Errors encountered.
+912 Infos, 475 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:23 ; elapsed = 00:07:46 . Memory (MB): peak = 3082.789 ; gain = 1699.445 ; free physical = 4756 ; free virtual = 44047
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3082.789 ; gain = 0.000 ; free physical = 4757 ; free virtual = 44047
+synth_design: Time (s): cpu = 00:07:41 ; elapsed = 00:08:03 . Memory (MB): peak = 3103.824 ; gain = 1720.477 ; free physical = 4825 ; free virtual = 46301
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3103.824 ; gain = 0.000 ; free physical = 4826 ; free virtual = 46302
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/leon5mp.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3106.801 ; gain = 24.012 ; free physical = 4752 ; free virtual = 44051
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3127.836 ; gain = 24.012 ; free physical = 4836 ; free virtual = 46321
 INFO: [runtcl-4] Executing : report_utilization -file leon5mp_utilization_synth.rpt -pb leon5mp_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Feb  9 04:07:01 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 10 12:12:37 2023...

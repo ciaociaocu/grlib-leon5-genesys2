@@ -424,5 +424,6 @@ ncsim:
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  work ahbrom.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  work leon5mp.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  work ddr_dummy.vhd
+	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  work ahb2axi_mig_7series.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  work testbench.vhd
 	ncelab -timescale 10ps/10ps testbench:behav

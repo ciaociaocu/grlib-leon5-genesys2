@@ -52,3 +52,4 @@
 	-work work ahbrom.vhd
 	-work work leon5mp.vhd
 	-work work ddr_dummy.vhd
+	-work work ahb2axi_mig_7series.vhd

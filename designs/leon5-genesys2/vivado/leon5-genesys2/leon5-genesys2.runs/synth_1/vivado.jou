@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Feb  9 03:59:01 2023
-# Process ID: 23557
+# Start of session at: Fri Feb 10 12:04:20 2023
+# Process ID: 21610
 # Current directory: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1
 # Command line: vivado -log leon5mp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source leon5mp.tcl
 # Log file: /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.runs/synth_1/leon5mp.vds

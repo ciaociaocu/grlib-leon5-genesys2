@@ -72,7 +72,7 @@
   mig u_mig (
 
     // Memory interface ports
-    .ddr3_addr                      (ddr3_addr),  // output [13:0]		ddr3_addr
+    .ddr3_addr                      (ddr3_addr),  // output [14:0]		ddr3_addr
     .ddr3_ba                        (ddr3_ba),  // output [2:0]		ddr3_ba
     .ddr3_cas_n                     (ddr3_cas_n),  // output			ddr3_cas_n
     .ddr3_ck_n                      (ddr3_ck_n),  // output [0:0]		ddr3_ck_n
@@ -81,13 +81,13 @@
     .ddr3_ras_n                     (ddr3_ras_n),  // output			ddr3_ras_n
     .ddr3_reset_n                   (ddr3_reset_n),  // output			ddr3_reset_n
     .ddr3_we_n                      (ddr3_we_n),  // output			ddr3_we_n
-    .ddr3_dq                        (ddr3_dq),  // inout [63:0]		ddr3_dq
-    .ddr3_dqs_n                     (ddr3_dqs_n),  // inout [7:0]		ddr3_dqs_n
-    .ddr3_dqs_p                     (ddr3_dqs_p),  // inout [7:0]		ddr3_dqs_p
+    .ddr3_dq                        (ddr3_dq),  // inout [31:0]		ddr3_dq
+    .ddr3_dqs_n                     (ddr3_dqs_n),  // inout [3:0]		ddr3_dqs_n
+    .ddr3_dqs_p                     (ddr3_dqs_p),  // inout [3:0]		ddr3_dqs_p
     .init_calib_complete            (init_calib_complete),  // output			init_calib_complete
       
 	.ddr3_cs_n                      (ddr3_cs_n),  // output [0:0]		ddr3_cs_n
-    .ddr3_dm                        (ddr3_dm),  // output [7:0]		ddr3_dm
+    .ddr3_dm                        (ddr3_dm),  // output [3:0]		ddr3_dm
     .ddr3_odt                       (ddr3_odt),  // output [0:0]		ddr3_odt
     // Application interface ports
     .ui_clk                         (ui_clk),  // output			ui_clk

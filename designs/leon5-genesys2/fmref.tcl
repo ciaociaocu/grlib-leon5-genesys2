@@ -352,3 +352,4 @@ read_vhdl -r -libname work config.vhd
 read_vhdl -r -libname work ahbrom.vhd
 read_vhdl -r -libname work leon5mp.vhd
 read_vhdl -r -libname work ddr_dummy.vhd
+read_vhdl -r -libname work ahb2axi_mig_7series.vhd

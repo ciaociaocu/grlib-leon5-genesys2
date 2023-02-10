@@ -74,10 +74,10 @@ entity leon5mp is
 --    writen          : out   std_ulogic;
 --    romsn           : out   std_logic;
 --    adv             : out   std_logic;
-    ddr3_dq         : inout std_logic_vector(63 downto 0);
-    ddr3_dqs_p      : inout std_logic_vector(7 downto 0);
-    ddr3_dqs_n      : inout std_logic_vector(7 downto 0);
-    ddr3_addr       : out   std_logic_vector(13 downto 0);
+    ddr3_dq         : inout std_logic_vector(31 downto 0);
+    ddr3_dqs_p      : inout std_logic_vector(3 downto 0);
+    ddr3_dqs_n      : inout std_logic_vector(3 downto 0);
+    ddr3_addr       : out   std_logic_vector(14 downto 0);
     ddr3_ba         : out   std_logic_vector(2 downto 0);
     ddr3_ras_n      : out   std_logic;
     ddr3_cas_n      : out   std_logic;
@@ -87,7 +87,7 @@ entity leon5mp is
     ddr3_ck_n       : out   std_logic_vector(0 downto 0);
     ddr3_cke        : out   std_logic_vector(0 downto 0);
     ddr3_cs_n       : out   std_logic_vector(0 downto 0);
-    ddr3_dm         : out   std_logic_vector(7 downto 0);
+    ddr3_dm         : out   std_logic_vector(3 downto 0);
     ddr3_odt        : out   std_logic_vector(0 downto 0);
     dsurx           : in    std_ulogic;
     dsutx           : out   std_ulogic;
@@ -116,46 +116,46 @@ end;
 
 architecture rtl of leon5mp is
 
-component ahb2axi_mig_7series 
-  generic(
-    hindex                  : integer := 0;
-    haddr                   : integer := 0;
-    hmask                   : integer := 16#f00#;
-    pindex                  : integer := 0;
-    paddr                   : integer := 0;
-    pmask                   : integer := 16#fff#
-  );
-  port(
-    ddr3_dq           : inout std_logic_vector(63 downto 0);
-    ddr3_dqs_p        : inout std_logic_vector(7 downto 0);
-    ddr3_dqs_n        : inout std_logic_vector(7 downto 0);
-    ddr3_addr         : out   std_logic_vector(13 downto 0);
-    ddr3_ba           : out   std_logic_vector(2 downto 0);
-    ddr3_ras_n        : out   std_logic;
-    ddr3_cas_n        : out   std_logic;
-    ddr3_we_n         : out   std_logic;
-    ddr3_reset_n      : out   std_logic;
-    ddr3_ck_p         : out   std_logic_vector(0 downto 0);
-    ddr3_ck_n         : out   std_logic_vector(0 downto 0);
-    ddr3_cke          : out   std_logic_vector(0 downto 0);
-    ddr3_cs_n         : out   std_logic_vector(0 downto 0);
-    ddr3_dm           : out   std_logic_vector(7 downto 0);
-    ddr3_odt          : out   std_logic_vector(0 downto 0);
-    ahbso             : out   ahb_slv_out_type;
-    ahbsi             : in    ahb_slv_in_type;
-    apbi              : in    apb_slv_in_type;
-    apbo              : out   apb_slv_out_type;
-    calib_done        : out   std_logic;
-    rst_n_syn         : in    std_logic;
-    rst_n_async       : in    std_logic;
-    clk_amba          : in    std_logic;
-    sys_clk_p         : in    std_logic;
-    sys_clk_n         : in    std_logic;
-    clk_ref_i         : in    std_logic;
-    ui_clk            : out   std_logic;
-    ui_clk_sync_rst   : out   std_logic
-   );
-end component;
+--component ahb2axi_mig_7series 
+--  generic(
+--    hindex                  : integer := 0;
+--    haddr                   : integer := 0;
+--    hmask                   : integer := 16#f00#;
+--    pindex                  : integer := 0;
+--    paddr                   : integer := 0;
+--    pmask                   : integer := 16#fff#
+--  );
+--  port(
+--    ddr3_dq           : inout std_logic_vector(63 downto 0);
+--    ddr3_dqs_p        : inout std_logic_vector(7 downto 0);
+--    ddr3_dqs_n        : inout std_logic_vector(7 downto 0);
+--    ddr3_addr         : out   std_logic_vector(13 downto 0);
+--    ddr3_ba           : out   std_logic_vector(2 downto 0);
+--    ddr3_ras_n        : out   std_logic;
+--    ddr3_cas_n        : out   std_logic;
+--    ddr3_we_n         : out   std_logic;
+--    ddr3_reset_n      : out   std_logic;
+--    ddr3_ck_p         : out   std_logic_vector(0 downto 0);
+--    ddr3_ck_n         : out   std_logic_vector(0 downto 0);
+--    ddr3_cke          : out   std_logic_vector(0 downto 0);
+--    ddr3_cs_n         : out   std_logic_vector(0 downto 0);
+--    ddr3_dm           : out   std_logic_vector(7 downto 0);
+--    ddr3_odt          : out   std_logic_vector(0 downto 0);
+--    ahbso             : out   ahb_slv_out_type;
+--    ahbsi             : in    ahb_slv_in_type;
+--    apbi              : in    apb_slv_in_type;
+--    apbo              : out   apb_slv_out_type;
+--    calib_done        : out   std_logic;
+--    rst_n_syn         : in    std_logic;
+--    rst_n_async       : in    std_logic;
+--    clk_amba          : in    std_logic;
+--    sys_clk_p         : in    std_logic;
+--    sys_clk_n         : in    std_logic;
+--    clk_ref_i         : in    std_logic;
+--    ui_clk            : out   std_logic;
+--    ui_clk_sync_rst   : out   std_logic
+--   );
+--end component;
 
 component axi_mig_7series is
   generic(
@@ -167,10 +167,10 @@ component axi_mig_7series is
     pmask                   : integer := 16#fff#
     );
   port(
-    ddr3_dq           : inout std_logic_vector(63 downto 0);
-    ddr3_dqs_p        : inout std_logic_vector(7 downto 0);
-    ddr3_dqs_n        : inout std_logic_vector(7 downto 0);
-    ddr3_addr         : out   std_logic_vector(13 downto 0);
+    ddr3_dq           : inout std_logic_vector(31 downto 0);
+    ddr3_dqs_p        : inout std_logic_vector(3 downto 0);
+    ddr3_dqs_n        : inout std_logic_vector(3 downto 0);
+    ddr3_addr         : out   std_logic_vector(14 downto 0);
     ddr3_ba           : out   std_logic_vector(2 downto 0);
     ddr3_ras_n        : out   std_logic;
     ddr3_cas_n        : out   std_logic;
@@ -180,7 +180,7 @@ component axi_mig_7series is
     ddr3_ck_n         : out   std_logic_vector(0 downto 0);
     ddr3_cke          : out   std_logic_vector(0 downto 0);
     ddr3_cs_n         : out   std_logic_vector(0 downto 0);
-    ddr3_dm           : out   std_logic_vector(7 downto 0);
+    ddr3_dm           : out   std_logic_vector(3 downto 0);
     ddr3_odt          : out   std_logic_vector(0 downto 0);
     aximi             : out   axi_somi_type;
     aximo             : in    axi_mosi_type;
@@ -834,7 +834,7 @@ begin
   ----------------------------------------------------------------------
   mig_gen : if (CFG_MIG_7SERIES = 1) and CFG_L2_EN = 0  generate
     gen_mig : if (USE_MIG_INTERFACE_MODEL /= true) generate
-      ddrc : ahb2axi_mig_7series generic map(
+      ddrc : entity work.ahb2axi_mig_7series generic map(
         hindex => hsidx_mig*(1-CFG_L2_EN), haddr => 16#400#, hmask => 16#C00#,
         pindex => pidx_mig, paddr => 4)
         port map(

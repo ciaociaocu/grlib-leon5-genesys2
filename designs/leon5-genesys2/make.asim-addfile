@@ -3,4 +3,5 @@ addfile -vhdl config.vhd
 addfile -vhdl ahbrom.vhd
 addfile -vhdl leon5mp.vhd
 addfile -vhdl ddr_dummy.vhd
+addfile -vhdl ahb2axi_mig_7series.vhd
 addfile -vhdl testbench.vhd

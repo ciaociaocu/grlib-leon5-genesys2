@@ -18,9 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 4
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7k325tffg900-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -94,7 +91,6 @@ read_vhdl -library gaisler {
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/axi.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/ahb2axi4b.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/misc/misc.vhd
-  /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/ddr/ahb2axi_mig_7series.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/axi/ahb2axib.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/libjtagcom.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/jtag/jtag.vhd
@@ -146,6 +142,7 @@ read_vhdl -library gaisler {
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/lib/gaisler/leon5v0/tbufmem5.vhd
 }
 read_vhdl -library work {
+  /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahb2axi_mig_7series.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ahbrom.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/config.vhd
   /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/ddr_dummy.vhd
@@ -176,9 +173,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc
 set_property used_in_implementation false [get_files /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/boards/digilent-genesys2/digilent-genesys2.xdc]
-
-read_xdc /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc
-set_property used_in_implementation false [get_files /home/zhichao/Downloads/GRLIB/grlib-leon5-genesys2/grlib-gpl-2022.4-b4280/designs/leon5-genesys2/vivado/leon5-genesys2/leon5-genesys2.srcs/constrs_1/new/mig_conflict.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

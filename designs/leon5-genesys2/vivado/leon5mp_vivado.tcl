@@ -468,6 +468,7 @@ read_vhdl -library work config.vhd
 read_vhdl -library work ahbrom.vhd
 read_vhdl -library work leon5mp.vhd
 read_vhdl -library work ddr_dummy.vhd
+read_vhdl -library work ahb2axi_mig_7series.vhd
 read_vhdl -library work testbench.vhd
 set_property used_in_synthesis false [get_files testbench.vhd]
 add_files -fileset sim_1 prom.srec ram.srec

@@ -92,12 +92,12 @@ module sim_tb_top;
                                      // # of memory Column Address bits.
    parameter CS_WIDTH              = 1;
                                      // # of unique CS outputs to memory.
-   parameter DM_WIDTH              = 8;
+   parameter DM_WIDTH              = 4;
                                      // # of DM (data mask)
-   parameter DQ_WIDTH              = 64;
+   parameter DQ_WIDTH              = 32;
                                      // # of DQ (data)
-   parameter DQS_WIDTH             = 8;
-   parameter DQS_CNT_WIDTH         = 3;
+   parameter DQS_WIDTH             = 4;
+   parameter DQS_CNT_WIDTH         = 2;
                                      // = ceil(log2(DQS_WIDTH))
    parameter DRAM_WIDTH            = 8;
                                      // # of DQ per DQS
@@ -106,9 +106,9 @@ module sim_tb_top;
                                      // # of Ranks.
    parameter ODT_WIDTH             = 1;
                                      // # of ODT outputs to memory.
-   parameter ROW_WIDTH             = 14;
+   parameter ROW_WIDTH             = 15;
                                      // # of memory Row Address bits.
-   parameter ADDR_WIDTH            = 28;
+   parameter ADDR_WIDTH            = 29;
                                      // # = RANK_WIDTH + BANK_WIDTH
                                      //     + ROW_WIDTH + COL_WIDTH;
                                      // Chip Select is always tied to low for
@@ -218,7 +218,7 @@ module sim_tb_top;
   localparam real TPROP_PCB_DATA_RD  = 0.00;
                        // Delay for data signal during Read operation
 
-  localparam MEMORY_WIDTH            = 8;
+  localparam MEMORY_WIDTH            = 16;
   localparam NUM_COMP                = DQ_WIDTH/MEMORY_WIDTH;
   localparam ECC_TEST 		   	= "OFF" ;
   localparam ERR_INSERT = (ECC_TEST == "ON") ? "OFF" : ECC ;
@@ -517,25 +517,51 @@ module sim_tb_top;
   genvar r,i;
   generate
     for (r = 0; r < CS_WIDTH; r = r + 1) begin: mem_rnk
-      for (i = 0; i < NUM_COMP; i = i + 1) begin: gen_mem
+      if(DQ_WIDTH/16) begin: mem
+        for (i = 0; i < NUM_COMP; i = i + 1) begin: gen_mem
+          ddr3_model u_comp_ddr3
+            (
+             .rst_n   (ddr3_reset_n),
+             .ck      (ddr3_ck_p_sdram),
+             .ck_n    (ddr3_ck_n_sdram),
+             .cke     (ddr3_cke_sdram[r]),
+             .cs_n    (ddr3_cs_n_sdram[r]),
+             .ras_n   (ddr3_ras_n_sdram),
+             .cas_n   (ddr3_cas_n_sdram),
+             .we_n    (ddr3_we_n_sdram),
+             .dm_tdqs (ddr3_dm_sdram[(2*(i+1)-1):(2*i)]),
+             .ba      (ddr3_ba_sdram[r]),
+             .addr    (ddr3_addr_sdram[r]),
+             .dq      (ddr3_dq_sdram[16*(i+1)-1:16*(i)]),
+             .dqs     (ddr3_dqs_p_sdram[(2*(i+1)-1):(2*i)]),
+             .dqs_n   (ddr3_dqs_n_sdram[(2*(i+1)-1):(2*i)]),
+             .tdqs_n  (),
+             .odt     (ddr3_odt_sdram[r])
+             );
+        end
+      end
+      if (DQ_WIDTH%16) begin: gen_mem_extrabits
         ddr3_model u_comp_ddr3
           (
            .rst_n   (ddr3_reset_n),
-           .ck      (ddr3_ck_p_sdram[(i*MEMORY_WIDTH)/72]),
-           .ck_n    (ddr3_ck_n_sdram[(i*MEMORY_WIDTH)/72]),
-           .cke     (ddr3_cke_sdram[((i*MEMORY_WIDTH)/72)+(1*r)]),
-           .cs_n    (ddr3_cs_n_sdram[((i*MEMORY_WIDTH)/72)+(1*r)]),
+           .ck      (ddr3_ck_p_sdram),
+           .ck_n    (ddr3_ck_n_sdram),
+           .cke     (ddr3_cke_sdram[r]),
+           .cs_n    (ddr3_cs_n_sdram[r]),
            .ras_n   (ddr3_ras_n_sdram),
            .cas_n   (ddr3_cas_n_sdram),
            .we_n    (ddr3_we_n_sdram),
-           .dm_tdqs (ddr3_dm_sdram[i]),
+           .dm_tdqs ({ddr3_dm_sdram[DM_WIDTH-1],ddr3_dm_sdram[DM_WIDTH-1]}),
            .ba      (ddr3_ba_sdram[r]),
            .addr    (ddr3_addr_sdram[r]),
-           .dq      (ddr3_dq_sdram[MEMORY_WIDTH*(i+1)-1:MEMORY_WIDTH*(i)]),
-           .dqs     (ddr3_dqs_p_sdram[i]),
-           .dqs_n   (ddr3_dqs_n_sdram[i]),
+           .dq      ({ddr3_dq_sdram[DQ_WIDTH-1:(DQ_WIDTH-8)],
+                      ddr3_dq_sdram[DQ_WIDTH-1:(DQ_WIDTH-8)]}),
+           .dqs     ({ddr3_dqs_p_sdram[DQS_WIDTH-1],
+                      ddr3_dqs_p_sdram[DQS_WIDTH-1]}),
+           .dqs_n   ({ddr3_dqs_n_sdram[DQS_WIDTH-1],
+                      ddr3_dqs_n_sdram[DQS_WIDTH-1]}),
            .tdqs_n  (),
-           .odt     (ddr3_odt_sdram[((i*MEMORY_WIDTH)/72)+(1*r)])
+           .odt     (ddr3_odt_sdram[r])
            );
       end
     end

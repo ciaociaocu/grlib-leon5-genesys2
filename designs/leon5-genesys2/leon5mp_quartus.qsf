@@ -360,5 +360,6 @@ set_global_assignment -name VHDL_FILE config.vhd
 set_global_assignment -name VHDL_FILE ahbrom.vhd
 set_global_assignment -name VHDL_FILE leon5mp.vhd
 set_global_assignment -name VHDL_FILE ddr_dummy.vhd
+set_global_assignment -name VHDL_FILE ahb2axi_mig_7series.vhd
 
 set_global_assignment -name TOP_LEVEL_ENTITY "leon5mp"

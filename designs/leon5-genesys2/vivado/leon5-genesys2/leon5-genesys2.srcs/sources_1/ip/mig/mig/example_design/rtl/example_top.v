@@ -96,7 +96,7 @@ module example_top #
                                      // # of unique CS outputs per rank for phy
    parameter CKE_WIDTH             = 1,
                                      // # of CKE outputs to memory.
-   parameter DM_WIDTH              = 8,
+   parameter DM_WIDTH              = 4,
                                      // # of DM (data mask)
    parameter ODT_WIDTH             = 1,
                                      // # of ODT outputs to memory.
@@ -106,10 +106,10 @@ module example_top #
                                      // # of memory Column Address bits.
    parameter CS_WIDTH              = 1,
                                      // # of unique CS outputs to memory.
-   parameter DQ_WIDTH              = 64,
+   parameter DQ_WIDTH              = 32,
                                      // # of DQ (data)
-   parameter DQS_WIDTH             = 8,
-   parameter DQS_CNT_WIDTH         = 3,
+   parameter DQS_WIDTH             = 4,
+   parameter DQS_CNT_WIDTH         = 2,
                                      // = ceil(log2(DQS_WIDTH))
    parameter DRAM_WIDTH            = 8,
                                      // # of DQ per DQS
@@ -119,9 +119,9 @@ module example_top #
    parameter nBANK_MACHS           = 4,
    parameter RANKS                 = 1,
                                      // # of Ranks.
-   parameter ROW_WIDTH             = 14,
+   parameter ROW_WIDTH             = 15,
                                      // # of memory Row Address bits.
-   parameter ADDR_WIDTH            = 28,
+   parameter ADDR_WIDTH            = 29,
                                      // # = RANK_WIDTH + BANK_WIDTH
                                      //     + ROW_WIDTH + COL_WIDTH;
                                      // Chip Select is always tied to low for
@@ -221,12 +221,12 @@ module example_top #
   (
 
    // Inouts
-   inout [63:0]                         ddr3_dq,
-   inout [7:0]                        ddr3_dqs_n,
-   inout [7:0]                        ddr3_dqs_p,
+   inout [31:0]                         ddr3_dq,
+   inout [3:0]                        ddr3_dqs_n,
+   inout [3:0]                        ddr3_dqs_p,
 
    // Outputs
-   output [13:0]                       ddr3_addr,
+   output [14:0]                       ddr3_addr,
    output [2:0]                      ddr3_ba,
    output                                       ddr3_ras_n,
    output                                       ddr3_cas_n,
@@ -238,7 +238,7 @@ module example_top #
    
    output [0:0]           ddr3_cs_n,
    
-   output [7:0]                        ddr3_dm,
+   output [3:0]                        ddr3_dm,
    
    output [0:0]                       ddr3_odt,
    
@@ -284,7 +284,7 @@ function integer clogb2 (input integer size);
   endfunction
 
 
-  localparam DATA_WIDTH            = 64;
+  localparam DATA_WIDTH            = 32;
   localparam RANK_WIDTH = clogb2(RANKS);
   localparam PAYLOAD_WIDTH         = (ECC_TEST == "OFF") ? DATA_WIDTH : DQ_WIDTH;
   localparam BURST_LENGTH          = STR_TO_INT(BURST_MODE);

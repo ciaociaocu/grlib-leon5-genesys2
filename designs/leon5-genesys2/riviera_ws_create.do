@@ -513,4 +513,5 @@ design.file.add ../config.vhd
 design.file.add ../ahbrom.vhd
 design.file.add ../leon5mp.vhd
 design.file.add ../ddr_dummy.vhd
+design.file.add ../ahb2axi_mig_7series.vhd
 design.file.add ../testbench.vhd

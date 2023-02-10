@@ -86,7 +86,7 @@ VIVADO_IMPL_STRATEGY=Performance_ExplorePostRoutePhysOpt
 
 ### Testbench, design and libraries to compile and not to compile
 
-VHDLSYNFILES= config.vhd ahbrom.vhd leon5mp.vhd ddr_dummy.vhd
+VHDLSYNFILES= config.vhd ahbrom.vhd leon5mp.vhd ddr_dummy.vhd ahb2axi_mig_7series.vhd
 VHDLSIMFILES=testbench.vhd
 
 TECHLIBS = unisim

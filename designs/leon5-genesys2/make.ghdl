@@ -410,4 +410,5 @@ ghdl-import:
 	ghdl -i --mb-comments --workdir=gnu/work --work=work -Pgnu -Pgnu/grlib -Pgnu/techmap -Pgnu/eth -Pgnu/opencores -Pgnu/gaisler -Pgnu/esa -Pgnu/fmf -Pgnu/micron -Pgnu/work ahbrom.vhd
 	ghdl -i --mb-comments --workdir=gnu/work --work=work -Pgnu -Pgnu/grlib -Pgnu/techmap -Pgnu/eth -Pgnu/opencores -Pgnu/gaisler -Pgnu/esa -Pgnu/fmf -Pgnu/micron -Pgnu/work leon5mp.vhd
 	ghdl -i --mb-comments --workdir=gnu/work --work=work -Pgnu -Pgnu/grlib -Pgnu/techmap -Pgnu/eth -Pgnu/opencores -Pgnu/gaisler -Pgnu/esa -Pgnu/fmf -Pgnu/micron -Pgnu/work ddr_dummy.vhd
+	ghdl -i --mb-comments --workdir=gnu/work --work=work -Pgnu -Pgnu/grlib -Pgnu/techmap -Pgnu/eth -Pgnu/opencores -Pgnu/gaisler -Pgnu/esa -Pgnu/fmf -Pgnu/micron -Pgnu/work ahb2axi_mig_7series.vhd
 	ghdl -i --mb-comments --workdir=gnu/work --work=work -Pgnu -Pgnu/grlib -Pgnu/techmap -Pgnu/eth -Pgnu/opencores -Pgnu/gaisler -Pgnu/esa -Pgnu/fmf -Pgnu/micron -Pgnu/work testbench.vhd

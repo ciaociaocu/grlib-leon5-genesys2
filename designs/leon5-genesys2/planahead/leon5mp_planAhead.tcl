@@ -528,6 +528,7 @@ read_vhdl -library work config.vhd
 read_vhdl -library work ahbrom.vhd
 read_vhdl -library work leon5mp.vhd
 read_vhdl -library work ddr_dummy.vhd
+read_vhdl -library work ahb2axi_mig_7series.vhd
 add_files -fileset sim_1 -norecurse testbench.vhd
 set_property library work [get_files testbench.vhd]
 set_property file_type VHDL [get_files testbench.vhd]

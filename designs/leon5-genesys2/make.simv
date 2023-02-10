@@ -414,4 +414,5 @@ simv:
 	vhdlan -nc  -work work ahbrom.vhd
 	vhdlan -nc  -work work leon5mp.vhd
 	vhdlan -nc  -work work ddr_dummy.vhd
+	vhdlan -nc  -work work ahb2axi_mig_7series.vhd
 	vhdlan -nc  -work work testbench.vhd
